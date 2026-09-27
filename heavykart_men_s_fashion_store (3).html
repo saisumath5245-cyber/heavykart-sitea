@@ -1,0 +1,2854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEAVYKART | Live Multi-Viewer Men's Fashion Store</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        heavy: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            800: '#27272a',
+                            900: '#18181b',
+                            950: '#09090b',
+                            accent: '#f59e0b',
+                            accentHover: '#d97706',
+                            whatsapp: '#25D366',
+                            whatsappDark: '#128C7E'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0d0e;
+            color: #f4f4f5;
+            overflow-x: hidden;
+        }
+        .font-heavy {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121316;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+        .glass-panel {
+            background: rgba(18, 19, 22, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .badge-pulse {
+            animation: pulse-glow 2s infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.04); }
+        }
+
+        /* Streetwear Graphic Animations & Shimmers */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            white-space: nowrap;
+            animation: marquee 24s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes card-shimmer {
+            0% { transform: translateX(-150%) skewX(-20deg); }
+            100% { transform: translateX(250%) skewX(-20deg); }
+        }
+        .group:hover .card-shimmer-sweep {
+            animation: card-shimmer 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes float-subtle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+        }
+        .animate-float {
+            animation: float-subtle 4s ease-in-out infinite;
+        }
+
+        .bg-grid-tech {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .glow-accent {
+            box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.25);
+        }
+        .glow-green {
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.35);
+        }
+    </style>
+</head>
+<body class="bg-[#0b0c0e] text-zinc-100 flex flex-col min-h-screen">
+
+    <!-- Top Announcement Bar -->
+    <aside aria-label="Announcement" class="bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 text-black text-xs font-bold py-2 px-4 text-center tracking-wider uppercase flex items-center justify-center gap-2 shadow-inner">
+        <i data-lucide="zap" class="w-3.5 h-3.5 animate-bounce"></i>
+        <span>NEW DROP 2026 • 3-ANGLE HIGH-DEF FIT VIEWS • INSTANT WHATSAPP CHECKOUT</span>
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 ml-1 text-black"></i>
+    </aside>
+
+    <!-- Industrial Streetwear Running Ticker -->
+    <div class="bg-zinc-950 border-b border-zinc-800/80 overflow-hidden py-1.5 flex select-none text-[10px] font-mono tracking-widest text-zinc-400">
+        <div class="animate-marquee gap-8 items-center">
+            <span class="flex items-center gap-2 text-amber-400 font-bold"><i data-lucide="crosshair" class="w-3 h-3"></i> HEAVYKART SPEC: 420 GSM COMBED COTTON</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-zinc-300">STRUCTURED STREET SILHOUETTES</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-emerald-400 flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3 h-3"></i> ZERO BOT CHECKOUT // DIRECT WHATSAPP</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-zinc-400">COORDINATES: 17.3850° N, 78.4867° E</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-amber-400 font-bold flex items-center gap-1.5"><i data-lucide="flame" class="w-3 h-3"></i> DROP EDITION 2026</span>
+            <span class="text-zinc-600">•</span>
+            <span class="flex items-center gap-2 text-amber-400 font-bold"><i data-lucide="crosshair" class="w-3 h-3"></i> HEAVYKART SPEC: 420 GSM COMBED COTTON</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-zinc-300">STRUCTURED STREET SILHOUETTES</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-emerald-400 flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3 h-3"></i> ZERO BOT CHECKOUT // DIRECT WHATSAPP</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-zinc-400">COORDINATES: 17.3850° N, 78.4867° E</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-3 cursor-pointer" onclick="resetFilters()">
+                <div class="w-10 h-10 bg-amber-500 text-black rounded-lg flex items-center justify-center font-heavy text-2xl font-black shadow-lg shadow-amber-500/30">
+                    H
+                </div>
+                <div>
+                    <span class="font-heavy text-2xl sm:text-3xl font-extrabold tracking-widest text-white">HEAVY<span class="text-amber-500">KART</span></span>
+                    <span class="block text-[10px] tracking-[0.25em] text-zinc-400 font-semibold uppercase -mt-1">Real-time Storefront</span>
+                </div>
+            </div>
+
+            <!-- Search Bar (Desktop) -->
+            <div class="hidden md:flex flex-1 max-w-md mx-6 relative">
+                <i data-lucide="search" class="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="text" id="searchInput" placeholder="Search oversized tees, cargos, jackets..." 
+                    class="w-full bg-zinc-900/90 text-sm border border-zinc-700 rounded-full pl-10 pr-4 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
+                <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <!-- Sync Status Pill -->
+                <div id="cloudSyncIndicator" class="hidden sm:flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 px-2.5 py-1.5 rounded-lg text-[11px] text-zinc-400">
+                    <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping" id="cloudSyncDot"></span>
+                    <span id="cloudSyncText">Connecting...</span>
+                </div>
+
+                <!-- Owner Admin Portal Button -->
+                <button onclick="openAdminModal()" class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-amber-400 border border-zinc-700 px-3 py-2 rounded-lg text-xs font-semibold transition-all shadow-sm" title="Owner Admin Dashboard">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-amber-500"></i>
+                    <span class="hidden sm:inline">Seller Portal</span>
+                </button>
+
+                <!-- WhatsApp Support Direct Link -->
+                <button onclick="openDirectWhatsAppChat()" class="flex items-center gap-1.5 bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] border border-[#25D366]/40 px-3 py-2 rounded-lg text-xs font-bold transition-all" title="Direct WhatsApp Assistance">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                    <span class="hidden sm:inline">WhatsApp Help</span>
+                </button>
+
+                <!-- Cart Button -->
+                <button onclick="toggleCartDrawer(true)" class="relative bg-amber-500 hover:bg-amber-400 text-black px-3.5 py-2 rounded-lg font-bold text-sm flex items-center gap-2 transition-all shadow-lg shadow-amber-500/20">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline font-semibold">Cart</span>
+                    <span id="cartCountBadge" class="bg-black text-amber-400 text-xs px-2 py-0.5 rounded-full font-extrabold ml-0.5">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Search Input Bar -->
+        <div class="md:hidden px-4 pb-3">
+            <div class="relative w-full">
+                <i data-lucide="search" class="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input type="text" id="mobileSearchInput" placeholder="Search men's streetwear, shirts..." 
+                    class="w-full bg-zinc-900 text-sm border border-zinc-700 rounded-full pl-10 pr-4 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-amber-500">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative overflow-hidden border-b border-zinc-800 bg-gradient-to-b from-zinc-900 to-[#0b0c0e] bg-grid-tech">
+        
+        <!-- Interactive 2D/3D Graphic Canvas Background -->
+        <canvas id="heroGraphicCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40 z-0"></canvas>
+
+        <!-- Streetwear Ambient Lighting Orb -->
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 right-10 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Graphic Watermarks / Industrial Labels -->
+        <div class="absolute top-6 left-6 hidden lg:flex flex-col text-[10px] font-mono text-zinc-600 space-y-1 select-none pointer-events-none">
+            <span class="text-amber-500/60 font-bold">SERIAL // HK-MODERN-SYS</span>
+            <span>SPEC: HEAVYWEIGHT DROP FIT</span>
+            <span>LAT/LONG: 17.3850° N</span>
+        </div>
+        <div class="absolute top-6 right-6 hidden lg:flex items-center gap-2 text-[10px] font-mono text-zinc-600 select-none pointer-events-none">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>LIVE SERVER BROADCAST</span>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-center space-y-6">
+            
+            <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider animate-float shadow-lg shadow-amber-500/10">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400 animate-spin" style="animation-duration: 6s;"></i> Pure Combed Cotton & Structured Fits
+            </div>
+            
+            <h1 class="font-heavy text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-none uppercase drop-shadow-2xl">
+                HEAVYWEIGHT <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-yellow-500 animate-pulse">STREET FIT</span> & FORMALS
+            </h1>
+            <p class="text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto font-normal leading-relaxed">
+                Heavyweight drop tees, combat cargos, and relaxed silhouettes. Browse high-definition 3-angle views for front, back, and fit details with instant WhatsApp ordering.
+            </p>
+
+            <!-- Quick CTA Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <button onclick="filterBySpecial('sale')" class="relative group overflow-hidden bg-amber-500 hover:bg-amber-400 text-black font-heavy text-lg px-6 py-3 rounded-xl transition-all shadow-xl shadow-amber-500/25 flex items-center gap-2 uppercase font-bold active:scale-95">
+                    <span class="absolute inset-0 w-1/2 h-full bg-white/30 transform -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-700"></span>
+                    <i data-lucide="tag" class="w-5 h-5"></i> View On-Sale Items
+                </button>
+                <button onclick="filterCategory('All')" class="bg-zinc-800/90 hover:bg-zinc-700 text-white font-heavy text-lg px-6 py-3 rounded-xl border border-zinc-700 hover:border-amber-500/50 transition-all flex items-center gap-2 uppercase active:scale-95">
+                    <i data-lucide="grid" class="w-5 h-5 text-amber-400"></i> Explore Full Drop
+                </button>
+            </div>
+
+            <!-- Trust Badges with Graphic Micro-Frames -->
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-zinc-800/80 max-w-lg mx-auto text-zinc-400 text-xs text-center">
+                <div class="p-2 rounded-xl bg-zinc-900/30 border border-zinc-800/60 hover:border-zinc-700 transition-colors">
+                    <span class="block font-bold text-white text-sm">3-Angle Views</span>
+                    <span class="text-[11px] text-zinc-400">Front, back & fit</span>
+                </div>
+                <div class="p-2 rounded-xl bg-zinc-900/30 border border-zinc-800/60 hover:border-emerald-500/40 transition-colors">
+                    <span class="block font-bold text-emerald-400 text-sm">Direct WhatsApp</span>
+                    <span class="text-[11px] text-zinc-400">Fast billing & support</span>
+                </div>
+                <div class="p-2 rounded-xl bg-zinc-900/30 border border-zinc-800/60 hover:border-zinc-700 transition-colors">
+                    <span class="block font-bold text-white text-sm">Easy Exchange</span>
+                    <span class="text-[11px] text-zinc-400">Hassle-free size swap</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Category & Filter Strip -->
+    <nav aria-label="Product Categories" class="sticky top-20 z-30 bg-[#101114] border-b border-zinc-800 py-3 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
+            
+            <!-- Category Tabs -->
+            <div class="flex items-center gap-2 flex-shrink-0" id="categoryButtonsContainer">
+                <!-- Dynamically populated categories -->
+            </div>
+
+            <!-- Sort and On-Sale Toggle -->
+            <div class="flex items-center gap-2 flex-shrink-0">
+                <button id="saleOnlyToggle" onclick="toggleSaleFilter()" class="flex items-center gap-1.5 bg-red-500/10 text-red-400 border border-red-500/30 px-3 py-1.5 rounded-full text-xs font-bold hover:bg-red-500/20 transition-all">
+                    <i data-lucide="percent" class="w-3.5 h-3.5"></i>
+                    <span>On Sale Only</span>
+                </button>
+                <select id="sortSelect" onchange="handleSortChange()" class="bg-zinc-900 border border-zinc-700 text-zinc-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-amber-500">
+                    <option value="featured">Featured First</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="discount">Biggest Discount</option>
+                </select>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Main Content: Store Catalogue -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- Filter Status Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-6 pb-2 border-b border-zinc-800 text-xs text-zinc-400">
+            <div id="filterResultText">
+                Showing all <span id="itemCount" class="text-amber-400 font-bold">0</span> men's products
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="inline-flex items-center gap-1.5 text-zinc-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span id="liveStatusNote">Live Sync Active</span>
+                </span>
+                <div class="flex items-center gap-2">
+                    <span class="text-zinc-500">Store WhatsApp:</span>
+                    <span id="displayStoreWhatsApp" class="text-emerald-400 font-mono font-semibold">+91 9381250578</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Injected by JavaScript -->
+        </div>
+
+        <!-- Empty State (Clean Customer-Facing, no admin buttons) -->
+        <div id="emptyCatalogueState" class="hidden text-center py-20">
+            <div class="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto text-zinc-500 mb-4">
+                <i data-lucide="package" class="w-8 h-8 text-amber-500/70"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">New Drops Coming Very Soon</h3>
+            <p class="text-xs text-zinc-400 max-w-sm mx-auto mb-6">Our upcoming collection is being prepped in the studio. You can message us directly on WhatsApp for catalogs, custom sizing, and early inquiries.</p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button onclick="openDirectWhatsAppChat()" class="bg-[#25D366] hover:bg-[#20ba59] text-black text-xs font-bold px-5 py-2.5 rounded-xl uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-green-950/40 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i> Inquire on WhatsApp
+                </button>
+                <button onclick="resetFilters()" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-bold px-4 py-2.5 rounded-xl uppercase tracking-wider border border-zinc-700 flex items-center gap-1.5 transition-all">
+                    <i data-lucide="rotate-ccw" class="w-3.5 h-3.5 text-amber-400"></i> Refresh Drops
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Full Screen Product Detail Modal (With 3-Image Gallery Selector) -->
+    <div id="productDetailModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md overflow-y-auto hidden" onclick="handleDetailBackdropClick(event)">
+        <div class="min-h-screen flex flex-col justify-between max-w-6xl mx-auto px-4 sm:px-6 py-6">
+            
+            <!-- Modal Navigation Header -->
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4 mb-6 sticky top-0 bg-black/80 backdrop-blur-md z-20">
+                <button onclick="closeProductModal()" class="flex items-center gap-2 text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-700 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>Back to Drops</span>
+                </button>
+                <div class="flex items-center gap-3">
+                    <button onclick="openActiveProductLightbox()" class="flex items-center gap-1.5 bg-zinc-900 hover:bg-zinc-800 text-amber-400 border border-amber-500/40 px-3 py-2 rounded-xl text-xs font-bold transition-all" title="View Fullscreen Photo">
+                        <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                        <span class="hidden sm:inline">Zoom Full Image</span>
+                    </button>
+                    <button onclick="toggleCartDrawer(true)" class="flex items-center gap-2 bg-amber-500 text-black px-3.5 py-2 rounded-xl text-xs font-bold hover:bg-amber-400 transition-all">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span id="modalCartCount" class="font-black">0</span>
+                    </button>
+                    <button onclick="closeProductModal()" class="p-2 text-zinc-400 hover:text-white rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Product Showcase Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Big Product Image + 3-Angle Thumbnail Gallery -->
+                <div class="lg:col-span-7 space-y-4">
+                    <!-- Main Image Display Container -->
+                    <div class="relative rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-800 group cursor-pointer shadow-2xl" onclick="openActiveProductLightbox()">
+                        <img id="modalProdImage" src="" alt="Product Showcase" 
+                            class="w-full max-h-[580px] object-cover object-top transition-transform duration-300">
+                        
+                        <div id="modalProdBadges" class="absolute top-4 left-4 flex flex-col gap-2 z-10"></div>
+
+                        <!-- Gallery Index Indicator -->
+                        <div id="modalImageIndexIndicator" class="absolute top-4 right-4 bg-black/80 backdrop-blur border border-zinc-700 text-zinc-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-full z-10">
+                            1 / 3
+                        </div>
+
+                        <!-- Previous / Next Image Chevron Buttons -->
+                        <button type="button" onclick="event.stopPropagation(); navigateModalImage(-1)" 
+                            class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center border border-zinc-700/80 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button type="button" onclick="event.stopPropagation(); navigateModalImage(1)" 
+                            class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center border border-zinc-700/80 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
+
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity pointer-events-none">
+                            <span class="bg-black/90 text-white font-bold text-xs px-4 py-2 rounded-full border border-amber-500/60 shadow-2xl flex items-center gap-2 backdrop-blur">
+                                <i data-lucide="maximize-2" class="w-4 h-4 text-amber-400"></i> Tap to View Full Screen Photo
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- 3 JPG Angle Thumbnails Strip -->
+                    <div>
+                        <div class="flex items-center justify-between text-[11px] text-zinc-400 uppercase tracking-wider font-bold mb-2">
+                            <span>Product Angles (3 JPG Views)</span>
+                            <span class="text-zinc-500">Tap to Switch</span>
+                        </div>
+                        <div id="modalThumbnailsStrip" class="grid grid-cols-3 gap-3">
+                            <!-- Injected dynamically: 3 JPG thumbnails -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Specifications & Order Box -->
+                <div class="lg:col-span-5 space-y-6 bg-[#131417] p-6 rounded-2xl border border-zinc-800">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span id="modalProdCategory" class="text-[11px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Category</span>
+                            <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                                <i data-lucide="check" class="w-3.5 h-3.5"></i> In Stock & Synced
+                            </span>
+                        </div>
+                        <h1 id="modalProdTitle" class="font-heavy text-2xl sm:text-3xl font-extrabold text-white uppercase leading-tight tracking-wide">
+                            Product Title
+                        </h1>
+                    </div>
+
+                    <!-- Price Block -->
+                    <div class="flex items-baseline gap-3 p-4 bg-zinc-900/80 rounded-xl border border-zinc-800">
+                        <span id="modalProdSalePrice" class="font-heavy text-3xl font-black text-white">₹0</span>
+                        <s id="modalProdOriginalPrice" class="text-sm text-zinc-500">₹0</s>
+                        <span id="modalProdDiscountTag" class="bg-red-500/20 text-red-400 border border-red-500/40 text-[11px] font-bold px-2 py-0.5 rounded">0% OFF</span>
+                    </div>
+
+                    <!-- Description & Specifications -->
+                    <div class="space-y-2 text-xs">
+                        <span class="text-zinc-400 font-bold uppercase tracking-wider block">Description & Specs:</span>
+                        <p id="modalProdDescription" class="text-zinc-300 leading-relaxed bg-zinc-950/70 p-3 rounded-xl border border-zinc-800/80">
+                            Description text.
+                        </p>
+                    </div>
+
+                    <!-- Size Picker -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-zinc-300 font-bold uppercase tracking-wider">Select Size:</span>
+                            <span class="text-zinc-500 text-[11px]">Regular Streetwear Fit</span>
+                        </div>
+                        <div id="modalSizesContainer" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <!-- Quantity Stepper -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <span class="text-xs font-bold text-zinc-300 uppercase">Quantity:</span>
+                        <div class="flex items-center border border-zinc-700 bg-zinc-950 rounded-xl overflow-hidden">
+                            <button onclick="changeModalQty(-1)" class="px-3 py-2 text-zinc-300 hover:text-white hover:bg-zinc-800 font-bold transition-all">-</button>
+                            <span id="modalQtyDisplay" class="px-4 py-2 text-xs font-bold text-amber-400 font-mono">1</span>
+                            <button onclick="changeModalQty(1)" class="px-3 py-2 text-zinc-300 hover:text-white hover:bg-zinc-800 font-bold transition-all">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="space-y-3 pt-4 border-t border-zinc-800">
+                        <button onclick="buyModalProductWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#20ba59] text-black font-heavy text-base py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 uppercase tracking-wider shadow-lg shadow-green-950/40 transition-all font-bold">
+                            <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+                            <span>Buy Instant On WhatsApp</span>
+                        </button>
+                        <button onclick="addModalProductToCart()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-heavy text-base py-3 px-4 rounded-xl flex items-center justify-center gap-2 uppercase tracking-wider border border-zinc-700 hover:text-amber-400 transition-all font-bold">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                            <span>Add To Shopping Bag</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Related Drops Showcase Section -->
+            <div class="mt-14 border-t border-zinc-800 pt-8 pb-4">
+                <h4 class="font-heavy text-lg font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i data-lucide="flame" class="w-4 h-4 text-amber-500"></i> Complete The Heavy Aesthetic (More Drops)
+                </h4>
+                <div id="modalRelatedContainer" class="grid grid-cols-2 sm:grid-cols-4 gap-4"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Dedicated Fullscreen Image Lightbox Modal with 3-Image Nav -->
+    <div id="imageLightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg hidden flex flex-col justify-between items-center p-4 sm:p-6" onclick="closeImageLightbox()">
+        <div class="w-full max-w-5xl flex items-center justify-between z-10" onclick="event.stopPropagation()">
+            <div class="flex items-center gap-3">
+                <h3 id="lightboxTitle" class="text-sm font-heavy text-white uppercase tracking-wider font-bold truncate pr-2">Product Image</h3>
+                <span id="lightboxIndexPill" class="text-[11px] font-mono bg-zinc-800 border border-zinc-700 px-2 py-0.5 rounded text-amber-400">1 / 3</span>
+            </div>
+            <button onclick="closeImageLightbox()" class="text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-700 p-2 rounded-xl">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div class="flex-1 flex items-center justify-center p-2 max-w-5xl w-full relative" onclick="event.stopPropagation()">
+            <img id="lightboxImg" src="" alt="Fullscreen Product View" 
+                class="max-h-[80vh] max-w-full object-contain rounded-2xl shadow-2xl border border-zinc-800 transition-all duration-200">
+            
+            <!-- Lightbox Nav Buttons -->
+            <button onclick="navigateLightboxImage(-1)" class="absolute left-2 sm:left-4 p-3 rounded-full bg-black/70 hover:bg-black text-white border border-zinc-700 shadow-xl transition-all">
+                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button onclick="navigateLightboxImage(1)" class="absolute right-2 sm:right-4 p-3 rounded-full bg-black/70 hover:bg-black text-white border border-zinc-700 shadow-xl transition-all">
+                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div class="w-full max-w-md pb-2 z-10 flex gap-3" onclick="event.stopPropagation()">
+            <button onclick="closeImageLightbox()" class="w-1/2 bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-2.5 rounded-xl text-xs uppercase border border-zinc-700">
+                Close Viewer
+            </button>
+            <button onclick="buyFromLightbox()" class="w-1/2 bg-[#25D366] hover:bg-[#20ba59] text-black font-bold py-2.5 rounded-xl text-xs uppercase flex items-center justify-center gap-1.5 shadow-lg">
+                <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                <span>Buy On WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Drawer Modal -->
+    <div id="cartDrawerBackdrop" class="fixed inset-0 bg-black/75 z-50 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm" onclick="toggleCartDrawer(false)"></div>
+    <div id="cartDrawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-[#121316] border-l border-zinc-800 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        
+        <!-- Cart Header -->
+        <div class="p-4 border-b border-zinc-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i data-lucide="shopping-bag" class="w-5 h-5 text-amber-500"></i>
+                <h2 class="font-heavy text-xl uppercase font-bold text-white tracking-wide">Your Shopping Bag</h2>
+            </div>
+            <button onclick="toggleCartDrawer(false)" class="text-zinc-400 hover:text-white p-1 rounded-lg hover:bg-zinc-800">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
+
+        <!-- Cart Footer & WhatsApp Checkout Summary -->
+        <div class="p-4 border-t border-zinc-800 bg-[#0e0f12] space-y-3">
+            <div class="space-y-1.5 text-xs">
+                <div class="flex justify-between text-zinc-400">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal" class="font-medium text-zinc-200">₹0</span>
+                </div>
+                <div class="flex justify-between text-emerald-400">
+                    <span>Total Discount Savings:</span>
+                    <span id="cartDiscount" class="font-medium">-₹0</span>
+                </div>
+                <div class="flex justify-between text-zinc-400">
+                    <span>Estimated Shipping:</span>
+                    <span class="text-emerald-400 font-bold uppercase">Free</span>
+                </div>
+                <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-zinc-800">
+                    <span>Grand Total:</span>
+                    <span id="cartGrandTotal" class="text-amber-400 font-heavy text-xl">₹0</span>
+                </div>
+            </div>
+
+            <button onclick="openCheckoutModal()" id="cartCheckoutBtn" class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-black font-bold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg shadow-green-900/30 transition-all uppercase tracking-wide">
+                <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+                <span>Order Bag On WhatsApp</span>
+            </button>
+
+            <button onclick="clearCart()" class="w-full text-zinc-500 hover:text-red-400 text-xs py-1 transition-colors">
+                Empty Cart
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Customer Details for WhatsApp Order Modal -->
+    <div id="checkoutModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-[#141518] border border-zinc-700 w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            <div class="p-5 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/50">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-[#25D366]/20 text-[#25D366] flex items-center justify-center">
+                        <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heavy text-lg uppercase font-bold text-white">Complete WhatsApp Order</h3>
+                        <p class="text-[11px] text-zinc-400">We format your order and open WhatsApp directly with the owner</p>
+                    </div>
+                </div>
+                <button onclick="closeCheckoutModal()" class="text-zinc-400 hover:text-white p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <form id="checkoutForm" onsubmit="executeWhatsAppOrder(event)" class="p-5 space-y-4 text-xs">
+                <div id="checkoutOrderPreview" class="bg-zinc-900/80 p-3 rounded-lg border border-zinc-800 max-h-32 overflow-y-auto space-y-1"></div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-zinc-300 font-semibold mb-1">Your Full Name *</label>
+                        <input type="text" id="custName" required placeholder="e.g. Rahul Verma" 
+                            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-zinc-300 font-semibold mb-1">Contact Phone / WhatsApp *</label>
+                        <input type="tel" id="custPhone" required placeholder="e.g. 9876543210" 
+                            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-zinc-300 font-semibold mb-1">Complete Delivery Address with Pincode *</label>
+                    <textarea id="custAddress" required rows="2" placeholder="House/Flat No, Landmark, City, State - PIN" 
+                        class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500"></textarea>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-zinc-300 font-semibold mb-1">Preferred Payment Mode</label>
+                        <select id="custPayment" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                            <option value="UPI / QR Code">UPI (GPay / PhonePe / Paytm)</option>
+                            <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+                            <option value="Direct Bank Transfer">Bank Transfer / IMPS</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-zinc-300 font-semibold mb-1">Special Instruction (Optional)</label>
+                        <input type="text" id="custNotes" placeholder="e.g. Call before delivery" 
+                            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500">
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-[#25D366] hover:bg-[#1faa50] text-black font-extrabold py-3 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg shadow-green-950 transition-all uppercase tracking-wide">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>Confirm & Send Order via WhatsApp</span>
+                    </button>
+                    <p class="text-[10px] text-zinc-500 text-center mt-2">
+                        WhatsApp will open with a ready-made bill message. Tap Send to finalize with our team!
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Owner / Admin Portal Modal -->
+    <div id="adminModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+        <div class="bg-[#131417] border border-zinc-700 w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh]">
+            
+            <!-- Admin Header -->
+            <div class="p-4 sm:p-5 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/80">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center justify-center">
+                        <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h2 class="font-heavy text-xl uppercase font-bold text-white tracking-wide">HeavyKart Seller Control Panel</h2>
+                        <p class="text-xs text-zinc-400">Add products with up to 3 JPG images (Front, Back, Detail) — synced live across all viewers</p>
+                    </div>
+                </div>
+                <button onclick="closeAdminModal()" class="text-zinc-400 hover:text-white p-1.5 rounded-lg hover:bg-zinc-800">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Admin Authentication Overlay (If locked) -->
+            <div id="adminLockScreen" class="p-8 text-center space-y-4 flex-1 flex flex-col justify-center items-center">
+                <div class="w-16 h-16 bg-zinc-800 border border-zinc-700 rounded-2xl flex items-center justify-center text-amber-400 mb-2">
+                    <i data-lucide="lock" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">Seller Passcode Required</h3>
+                <p class="text-xs text-zinc-400 max-w-xs">Enter your secure store manager code to add products on sale or update prices for all users.</p>
+                <div class="w-full max-w-xs space-y-3">
+                    <input type="password" id="adminPassInput" placeholder="Enter owner passcode" 
+                        class="w-full bg-zinc-900 border border-zinc-700 rounded-xl p-3 text-sm text-center tracking-widest text-white focus:outline-none focus:border-amber-500">
+                    <button onclick="verifyAdminPasscode()" class="w-full bg-amber-500 hover:bg-amber-400 text-black font-heavy text-base py-2.5 rounded-xl uppercase">
+                        Unlock Dashboard
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Main Workspace -->
+            <div id="adminWorkspace" class="hidden flex-1 overflow-y-auto p-4 sm:p-6 space-y-6">
+                
+                <!-- Quick Store Settings Card -->
+                <div class="glass-panel p-4 rounded-xl border border-zinc-800 flex flex-wrap items-center justify-between gap-4">
+                    <div class="space-y-1">
+                        <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider block">Store WhatsApp Order Number</span>
+                        <div class="flex items-center gap-2">
+                            <input type="text" id="ownerPhoneSetting" placeholder="e.g. 919381250578 (with country code)" 
+                                class="bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-1.5 text-xs text-white font-mono w-60 focus:border-amber-500 focus:outline-none">
+                            <button onclick="saveStoreSettings()" class="bg-zinc-800 hover:bg-zinc-700 text-amber-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-zinc-700">
+                                Save Number
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button onclick="loadCuratedSampleProducts()" class="bg-amber-500/15 hover:bg-amber-500/25 text-amber-400 text-xs px-3 py-2 rounded-lg border border-amber-500/40 flex items-center gap-1.5 transition-colors">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Load 3 Sample Drops
+                        </button>
+                        <button onclick="clearAllProducts()" class="bg-red-500/15 hover:bg-red-500/25 text-red-400 text-xs px-3 py-2 rounded-lg border border-red-500/40 flex items-center gap-1.5 transition-colors" title="Delete all items from public catalogue">
+                            <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Clear All Store Products
+                        </button>
+                        <button onclick="lockAdminPanel()" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white text-xs px-3 py-2 rounded-lg border border-zinc-700 flex items-center gap-1.5">
+                            <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Lock Panel
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tabs: Add Product / Manage Products / WhatsApp Leads Log -->
+                <div class="border-b border-zinc-800 flex gap-4 text-xs font-bold uppercase tracking-wider">
+                    <button onclick="switchAdminTab('add')" id="tabBtnAdd" class="pb-3 text-amber-400 border-b-2 border-amber-500">
+                        + Add New Product to Sell
+                    </button>
+                    <button onclick="switchAdminTab('inventory')" id="tabBtnInventory" class="pb-3 text-zinc-400 hover:text-white">
+                        Inventory & Sale Control (<span id="adminInventoryCount">0</span>)
+                    </button>
+                    <button onclick="switchAdminTab('orders')" id="tabBtnOrders" class="pb-3 text-zinc-400 hover:text-white">
+                        Recent WhatsApp Inquiries (<span id="adminOrdersCount">0</span>)
+                    </button>
+                </div>
+
+                <!-- Tab 1: Add New Product Form With 3 JPG Image Upload Slots -->
+                <div id="tabAddProduct" class="space-y-4">
+                    <form id="addProductForm" onsubmit="handleAddNewProduct(event)" class="space-y-4 bg-zinc-900/60 p-5 rounded-xl border border-zinc-800">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-heavy uppercase text-base text-amber-400 font-bold flex items-center gap-2">
+                                <i data-lucide="plus-circle" class="w-4 h-4"></i> Enter Product Details
+                            </h4>
+                            <span class="text-[11px] text-emerald-400 font-medium flex items-center gap-1">
+                                <i data-lucide="globe" class="w-3.5 h-3.5"></i> Broadcasts to all users live
+                            </span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <label class="block text-zinc-300 font-semibold mb-1">Product Title *</label>
+                                <input type="text" id="newProdName" required placeholder="e.g. Heavy Acid-Wash Oversized T-Shirt" 
+                                    class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-zinc-300 font-semibold mb-1">Category *</label>
+                                <select id="newProdCategory" class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                                    <option value="Oversized Tees">Oversized Tees (Drop-Shoulder)</option>
+                                    <option value="Cargo & Pants">Cargo & Utility Pants</option>
+                                    <option value="Shirts & Polos">Shirts & Cuban Polos</option>
+                                    <option value="Jackets & Hoodies">Jackets & Heavy Hoodies</option>
+                                    <option value="Footwear">Street Sneakers & Shoes</option>
+                                    <option value="Accessories">Men's Chains & Accessories</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                            <div>
+                                <label class="block text-zinc-300 font-semibold mb-1">Original MRP Price (₹) *</label>
+                                <input type="number" id="newProdOriginalPrice" required min="1" placeholder="e.g. 1999" 
+                                    class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-zinc-300 font-semibold mb-1">Selling / Offer Price (₹) *</label>
+                                <input type="number" id="newProdSalePrice" required min="1" placeholder="e.g. 999" 
+                                    class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-zinc-300 font-semibold mb-1">Badge Tag</label>
+                                <input type="text" id="newProdBadge" placeholder="e.g. 50% OFF, HOT, NEW" 
+                                    class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                            </div>
+                        </div>
+
+                        <!-- On-Sale Checkbox & Sizes -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <label class="block text-zinc-300 font-semibold mb-1">Available Sizes (Comma Separated)</label>
+                                <input type="text" id="newProdSizes" value="S, M, L, XL, XXL" placeholder="S, M, L, XL, XXL" 
+                                    class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div class="flex items-center gap-3 pt-6">
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" id="newProdOnSale" class="sr-only peer" checked>
+                                    <div class="w-11 h-6 bg-zinc-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
+                                    <span class="ml-3 text-xs font-semibold text-zinc-300">Mark as "On Sale"</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- PRODUCT 3 JPG IMAGES SLOTS -->
+                        <div class="text-xs space-y-4 bg-zinc-950/80 p-4 sm:p-5 rounded-xl border border-zinc-800">
+                            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800 pb-3">
+                                <div>
+                                    <h5 class="text-amber-400 font-heavy uppercase text-sm tracking-wider flex items-center gap-2">
+                                        <i data-lucide="images" class="w-4 h-4"></i> Product Showcase JPG Images (3 Angles)
+                                    </h5>
+                                    <p class="text-[11px] text-zinc-400">Upload or paste links for up to 3 JPG photos. Customers will see an interactive 3-image gallery.</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Fast 3-JPG Presets:</span>
+                                    <button type="button" onclick="load3ImagePreset('tee')" class="px-2 py-1 bg-zinc-800 hover:bg-zinc-700 text-amber-400 rounded text-[10px] font-bold border border-zinc-700">Tee 3 Angles</button>
+                                    <button type="button" onclick="load3ImagePreset('cargo')" class="px-2 py-1 bg-zinc-800 hover:bg-zinc-700 text-amber-400 rounded text-[10px] font-bold border border-zinc-700">Cargo 3 Angles</button>
+                                    <button type="button" onclick="load3ImagePreset('flannel')" class="px-2 py-1 bg-zinc-800 hover:bg-zinc-700 text-amber-400 rounded text-[10px] font-bold border border-zinc-700">Shirt 3 Angles</button>
+                                </div>
+                            </div>
+
+                            <!-- 3 Slots Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                
+                                <!-- SLOT 1: Primary Cover JPG -->
+                                <div class="bg-zinc-900/70 p-3 rounded-xl border border-zinc-800 space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-bold text-amber-400 text-[11px] uppercase tracking-wider flex items-center gap-1">
+                                            <i data-lucide="image" class="w-3.5 h-3.5"></i> JPG 1: Front / Cover *
+                                        </span>
+                                        <span class="text-[10px] text-red-400 font-bold">REQUIRED</span>
+                                    </div>
+
+                                    <!-- Upload button -->
+                                    <div class="border border-dashed border-zinc-700 hover:border-amber-500/80 rounded-lg p-2.5 text-center transition-colors bg-zinc-950/40">
+                                        <input type="file" id="fileSlot1" accept="image/jpeg, image/jpg, image/png, image/webp" class="hidden" onchange="handleSlotFile(event, 1)">
+                                        <label for="fileSlot1" class="cursor-pointer flex items-center justify-center gap-1.5 text-[11px] text-zinc-300 hover:text-white font-medium">
+                                            <i data-lucide="upload" class="w-3.5 h-3.5 text-amber-400"></i> Upload JPG File
+                                        </label>
+                                    </div>
+
+                                    <!-- URL input -->
+                                    <input type="text" id="urlSlot1" required placeholder="Paste .jpg URL" oninput="handleSlotUrl(this.value, 1)"
+                                        class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2 text-white font-mono text-[11px] focus:outline-none focus:border-amber-500">
+
+                                    <!-- Preview Box -->
+                                    <div id="previewSlot1" class="hidden relative rounded-lg overflow-hidden bg-zinc-950 border border-zinc-800 aspect-[4/5] flex items-center justify-center">
+                                        <img id="imgSlot1" src="" alt="JPG 1 Preview" class="w-full h-full object-cover">
+                                        <button type="button" onclick="clearSlot(1)" class="absolute top-1.5 right-1.5 bg-black/80 hover:bg-black text-red-400 p-1 rounded-md" title="Clear">
+                                            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- SLOT 2: Back View JPG -->
+                                <div class="bg-zinc-900/70 p-3 rounded-xl border border-zinc-800 space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-bold text-zinc-300 text-[11px] uppercase tracking-wider flex items-center gap-1">
+                                            <i data-lucide="image" class="w-3.5 h-3.5 text-amber-500"></i> JPG 2: Back View
+                                        </span>
+                                        <span class="text-[10px] text-zinc-500 font-bold">OPTIONAL</span>
+                                    </div>
+
+                                    <!-- Upload button -->
+                                    <div class="border border-dashed border-zinc-700 hover:border-amber-500/80 rounded-lg p-2.5 text-center transition-colors bg-zinc-950/40">
+                                        <input type="file" id="fileSlot2" accept="image/jpeg, image/jpg, image/png, image/webp" class="hidden" onchange="handleSlotFile(event, 2)">
+                                        <label for="fileSlot2" class="cursor-pointer flex items-center justify-center gap-1.5 text-[11px] text-zinc-300 hover:text-white font-medium">
+                                            <i data-lucide="upload" class="w-3.5 h-3.5 text-amber-400"></i> Upload JPG File
+                                        </label>
+                                    </div>
+
+                                    <!-- URL input -->
+                                    <input type="text" id="urlSlot2" placeholder="Paste .jpg URL" oninput="handleSlotUrl(this.value, 2)"
+                                        class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2 text-white font-mono text-[11px] focus:outline-none focus:border-amber-500">
+
+                                    <!-- Preview Box -->
+                                    <div id="previewSlot2" class="hidden relative rounded-lg overflow-hidden bg-zinc-950 border border-zinc-800 aspect-[4/5] flex items-center justify-center">
+                                        <img id="imgSlot2" src="" alt="JPG 2 Preview" class="w-full h-full object-cover">
+                                        <button type="button" onclick="clearSlot(2)" class="absolute top-1.5 right-1.5 bg-black/80 hover:bg-black text-red-400 p-1 rounded-md" title="Clear">
+                                            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- SLOT 3: Detail / Model Angle JPG -->
+                                <div class="bg-zinc-900/70 p-3 rounded-xl border border-zinc-800 space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-bold text-zinc-300 text-[11px] uppercase tracking-wider flex items-center gap-1">
+                                            <i data-lucide="image" class="w-3.5 h-3.5 text-amber-500"></i> JPG 3: Detail / Angle
+                                        </span>
+                                        <span class="text-[10px] text-zinc-500 font-bold">OPTIONAL</span>
+                                    </div>
+
+                                    <!-- Upload button -->
+                                    <div class="border border-dashed border-zinc-700 hover:border-amber-500/80 rounded-lg p-2.5 text-center transition-colors bg-zinc-950/40">
+                                        <input type="file" id="fileSlot3" accept="image/jpeg, image/jpg, image/png, image/webp" class="hidden" onchange="handleSlotFile(event, 3)">
+                                        <label for="fileSlot3" class="cursor-pointer flex items-center justify-center gap-1.5 text-[11px] text-zinc-300 hover:text-white font-medium">
+                                            <i data-lucide="upload" class="w-3.5 h-3.5 text-amber-400"></i> Upload JPG File
+                                        </label>
+                                    </div>
+
+                                    <!-- URL input -->
+                                    <input type="text" id="urlSlot3" placeholder="Paste .jpg URL" oninput="handleSlotUrl(this.value, 3)"
+                                        class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2 text-white font-mono text-[11px] focus:outline-none focus:border-amber-500">
+
+                                    <!-- Preview Box -->
+                                    <div id="previewSlot3" class="hidden relative rounded-lg overflow-hidden bg-zinc-950 border border-zinc-800 aspect-[4/5] flex items-center justify-center">
+                                        <img id="imgSlot3" src="" alt="JPG 3 Preview" class="w-full h-full object-cover">
+                                        <button type="button" onclick="clearSlot(3)" class="absolute top-1.5 right-1.5 bg-black/80 hover:bg-black text-red-400 p-1 rounded-md" title="Clear">
+                                            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-zinc-300 font-semibold mb-1 text-xs">Description & Fabric Specs</label>
+                            <textarea id="newProdDesc" rows="2" placeholder="e.g. 100% French Terry Cotton, 420 GSM heavy fabric. Pre-shrunk bio-washed." 
+                                class="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-amber-500"></textarea>
+                        </div>
+
+                        <button type="submit" id="saveProdBtn" class="w-full bg-amber-500 hover:bg-amber-400 text-black font-heavy text-base py-3 rounded-xl uppercase flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+                            <i data-lucide="check" class="w-5 h-5"></i> Publish Product (3 JPGs) Live For All Viewers
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Tab 2: Inventory & Sale Management Table -->
+                <div id="tabInventory" class="hidden space-y-4">
+                    <div class="overflow-x-auto border border-zinc-800 rounded-xl">
+                        <table class="w-full text-left text-xs text-zinc-300">
+                            <thead class="bg-zinc-900 text-zinc-400 font-bold uppercase text-[10px] tracking-wider border-b border-zinc-800">
+                                <tr>
+                                    <th class="p-3">Product</th>
+                                    <th class="p-3">Category</th>
+                                    <th class="p-3">Selling Price</th>
+                                    <th class="p-3">Original MRP</th>
+                                    <th class="p-3">Sale Status</th>
+                                    <th class="p-3 text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminInventoryTableBody" class="divide-y divide-zinc-800/60 font-sans"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Recent WhatsApp Orders / Inquiries Tracker -->
+                <div id="tabOrders" class="hidden space-y-4">
+                    <p class="text-xs text-zinc-400">Every time a customer triggers WhatsApp order checkout, an entry is captured here for your records.</p>
+                    <div id="adminOrdersList" class="space-y-3"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Custom Toast Notification Element -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 bg-zinc-900 text-white border border-zinc-700 px-4 py-3 rounded-xl shadow-2xl">
+        <div id="toastIcon" class="text-amber-400">
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+        </div>
+        <div class="text-xs">
+            <p id="toastTitle" class="font-bold text-white">Success</p>
+            <p id="toastMessage" class="text-zinc-400">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <!-- Quick Edit Price Modal -->
+    <div id="quickEditModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-[#141518] border border-zinc-700 w-full max-w-sm rounded-2xl p-5 space-y-4 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-3">
+                <h4 class="text-white font-heavy text-base uppercase font-bold">Update Selling Price</h4>
+                <button onclick="closeQuickEditModal()" class="text-zinc-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <p id="quickEditProdTitle" class="text-xs text-zinc-300 truncate font-semibold"></p>
+            <div>
+                <label class="block text-[11px] text-zinc-400 uppercase font-bold mb-1">New Price (₹)</label>
+                <input type="number" id="quickEditPriceInput" min="1" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-amber-500 font-mono text-sm">
+            </div>
+            <div class="flex gap-2 pt-2">
+                <button onclick="closeQuickEditModal()" class="w-1/2 bg-zinc-800 text-zinc-300 hover:text-white py-2 rounded-lg text-xs font-bold">Cancel</button>
+                <button onclick="submitQuickPriceEdit()" class="w-1/2 bg-amber-500 hover:bg-amber-400 text-black py-2 rounded-lg text-xs font-heavy font-bold uppercase">Save Price</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-zinc-800/80 bg-[#090a0c] text-zinc-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 bg-amber-500 text-black rounded font-heavy text-lg font-black flex items-center justify-center">H</div>
+                    <span class="font-heavy text-xl text-white font-bold tracking-widest">HEAVY<span class="text-amber-500">KART</span></span>
+                </div>
+                <p class="text-[11px] text-zinc-500 leading-relaxed">
+                    India's definitive fast-fashion label engineered for the modern man. Uncompromising GSM fabrics, structured fits, 3-angle JPG viewer, and instant WhatsApp ordering with live seller inventory sync.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-heavy text-sm text-white uppercase font-bold tracking-wider mb-3">Categories</h4>
+                <ul class="space-y-1.5 text-zinc-400">
+                    <li><button onclick="filterCategory('Oversized Tees')" class="hover:text-amber-400">Heavy Drop Tees</button></li>
+                    <li><button onclick="filterCategory('Cargo & Pants')" class="hover:text-amber-400">Tactical Cargos</button></li>
+                    <li><button onclick="filterCategory('Shirts & Polos')" class="hover:text-amber-400">Cuban & Knitted Polos</button></li>
+                    <li><button onclick="filterCategory('Jackets & Hoodies')" class="hover:text-amber-400">Heavyweight Hoodies</button></li>
+                    <li><button onclick="filterCategory('Accessories')" class="hover:text-amber-400">Men's Streetwear Accessories</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heavy text-sm text-white uppercase font-bold tracking-wider mb-3">Direct Ordering</h4>
+                <p class="text-[11px] text-zinc-500 mb-2">No complicated payment portals. Click "Buy on WhatsApp", send your address, and pay via UPI or Cash on Delivery.</p>
+                <div class="flex items-center gap-2 text-emerald-400 font-bold">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                    <span>Verified WhatsApp Checkout</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-heavy text-sm text-white uppercase font-bold tracking-wider mb-3">Seller Portal</h4>
+                <p class="text-[11px] text-zinc-500 mb-2">Store owners can login anytime to update stocks, run sales, or add drops with 3 JPG photos.</p>
+                <button onclick="openAdminModal()" class="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold">
+                    <i data-lucide="settings" class="w-3.5 h-3.5"></i> Seller Account Portal
+                </button>
+            </div>
+        </div>
+        <div class="border-t border-zinc-900 py-4 text-center text-zinc-600 text-[11px]">
+            © <span id="currentYear"></span> HEAVYKART Men's Fashion Apparel. Real-time Multi-Viewer Catalogue.
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Action Beacon with Radar Wave Graphic -->
+    <aside aria-label="Floating Contact Beacon" class="fixed bottom-6 left-6 z-40 flex items-center gap-3">
+        <button onclick="openDirectWhatsAppChat()" class="relative group bg-[#25D366] hover:bg-[#20ba59] text-black w-13 h-13 p-3.5 rounded-2xl shadow-2xl glow-green flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95" title="Chat on WhatsApp">
+            <!-- Pulsing Radar Graphic Ring -->
+            <span class="absolute inset-0 rounded-2xl border-2 border-[#25D366] animate-ping opacity-60 pointer-events-none"></span>
+            <i data-lucide="message-circle" class="w-6 h-6 fill-current relative z-10"></i>
+            
+            <!-- Hover Tooltip Label -->
+            <span class="absolute left-full ml-3 bg-zinc-900 text-white text-xs font-bold py-1.5 px-3 rounded-xl border border-zinc-700 shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:inline-block">
+                Chat with Owner Live
+            </span>
+        </button>
+    </aside>
+
+    <!-- Firebase Integration Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, doc, setDoc, deleteDoc, updateDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'heavykart-store';
+        let db = null;
+        let auth = null;
+        let currentUser = null;
+        let isCloudActive = false;
+
+        const defaultFirebaseConfig = {
+            apiKey: "AIzaSyDummyKeyForFallbackOnly",
+            authDomain: "heavykart-store.firebaseapp.com",
+            projectId: "heavykart-store",
+            storageBucket: "heavykart-store.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:abcdef"
+        };
+
+        const configToUse = (typeof __firebase_config !== 'undefined' && __firebase_config)
+            ? JSON.parse(__firebase_config)
+            : defaultFirebaseConfig;
+
+        async function initCloudEngine() {
+            try {
+                const app = initializeApp(configToUse);
+                auth = getAuth(app);
+                db = getFirestore(app);
+
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    const cred = await signInWithCustomToken(auth, __initial_auth_token);
+                    currentUser = cred.user;
+                } else {
+                    const cred = await signInAnonymously(auth);
+                    currentUser = cred.user;
+                }
+
+                isCloudActive = true;
+                setCloudStatusUI("Live Cloud Active", true);
+                bindCloudListeners();
+            } catch (err) {
+                console.warn("Cloud connection defaulted to fallback:", err);
+                isCloudActive = false;
+                setCloudStatusUI("Local Device Mode", false);
+                window.loadLocalFallbackProducts();
+            }
+        }
+
+        function setCloudStatusUI(label, active) {
+            const indicator = document.getElementById('cloudSyncIndicator');
+            const dot = document.getElementById('cloudSyncDot');
+            const text = document.getElementById('cloudSyncText');
+            const note = document.getElementById('liveStatusNote');
+
+            if (indicator && text && dot) {
+                indicator.classList.remove('hidden');
+                text.textContent = label;
+                dot.className = active ? 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse' : 'w-2 h-2 rounded-full bg-zinc-500';
+            }
+            if (note) {
+                note.textContent = active ? "Live Sync Active (All Viewers)" : "Offline Standalone";
+            }
+        }
+
+        function bindCloudListeners() {
+            if (!db || !currentUser) return;
+
+            const publicProductsRef = collection(db, 'artifacts', appId, 'public', 'data', 'products');
+
+            onSnapshot(publicProductsRef, (snapshot) => {
+                const liveList = [];
+                snapshot.forEach((docSnap) => {
+                    const data = docSnap.data();
+                    liveList.push({
+                        id: docSnap.id,
+                        ...data
+                    });
+                });
+
+                liveList.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+                window.setLiveProducts(liveList);
+            }, (error) => {
+                console.error("Firestore Products Listener error:", error);
+                showToast("Sync Issue", "Could not fetch cloud updates. Using local copy.");
+            });
+
+            const settingsDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'store');
+            onSnapshot(settingsDocRef, (snap) => {
+                if (snap.exists()) {
+                    const data = snap.data();
+                    if (data.whatsappNumber) {
+                        window.setStoreWhatsAppNumber(data.whatsappNumber, false);
+                    }
+                }
+            }, (err) => console.log("Settings listener error:", err));
+        }
+
+        window.cloudAddProduct = async function(prodData) {
+            if (!db || !currentUser) throw new Error("Cloud database not connected.");
+            const docId = String(prodData.id || Date.now());
+            const productDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'products', docId);
+            await setDoc(productDocRef, {
+                ...prodData,
+                createdAt: Date.now(),
+                sellerUid: currentUser.uid
+            });
+        };
+
+        window.cloudDeleteProduct = async function(productId) {
+            if (!db || !currentUser) return;
+            const productDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'products', String(productId));
+            await deleteDoc(productDocRef);
+        };
+
+        window.cloudUpdateProduct = async function(productId, fields) {
+            if (!db || !currentUser) return;
+            const productDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'products', String(productId));
+            await updateDoc(productDocRef, fields);
+        };
+
+        window.cloudSaveSettings = async function(newPhone) {
+            if (!db || !currentUser) return;
+            const settingsDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'store');
+            await setDoc(settingsDocRef, { whatsappNumber: newPhone }, { merge: true });
+        };
+
+        window.cloudLogOrder = async function(orderRecord) {
+            if (!db || !currentUser) return;
+            const orderDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'orders', orderRecord.id);
+            await setDoc(orderDocRef, {
+                ...orderRecord,
+                createdAt: Date.now()
+            });
+        };
+
+        window.cloudClearAllProducts = async function(prodList) {
+            if (!db || !currentUser) return;
+            for (const p of prodList) {
+                try {
+                    await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'products', String(p.id)));
+                } catch(e) { console.error(e); }
+            }
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initCloudEngine();
+        });
+    </script>
+
+    <!-- Main Application UI Logic -->
+    <script>
+        const CATEGORIES = [
+            "All",
+            "Oversized Tees",
+            "Cargo & Pants",
+            "Shirts & Polos",
+            "Jackets & Hoodies",
+            "Footwear",
+            "Accessories"
+        ];
+
+        let products = [];
+        let cart = [];
+        let selectedCategory = "All";
+        let onlySaleFilter = false;
+        let searchQuery = "";
+        let sortOption = "featured";
+        let storeSettings = {
+            whatsappNumber: "919381250578",
+            adminPasscode: "heavykart9898"
+        };
+        let ordersLog = [];
+        let isAdminLoggedIn = false;
+        let directCheckoutSingleItem = null;
+        let editingProductId = null;
+
+        // Active Product In Detail Modal & Lightbox
+        let activeModalProduct = null;
+        let activeModalSelectedSize = "";
+        let activeModalQty = 1;
+        let activeModalImageIndex = 0;
+
+        const LS_KEYS = {
+            PRODUCTS: 'heavykart_products_v5_3jpg',
+            CART: 'heavykart_cart_v2',
+            SETTINGS: 'heavykart_settings_v3',
+            ORDERS: 'heavykart_orders_v2'
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadPersistedLocalData();
+            renderCategoryTabs();
+            renderProducts();
+            updateCartUI();
+            updateStoreInfoDisplays();
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                searchQuery = e.target.value.trim().toLowerCase();
+                toggleClearSearchBtn();
+                renderProducts();
+            });
+
+            document.getElementById('mobileSearchInput').addEventListener('input', (e) => {
+                searchQuery = e.target.value.trim().toLowerCase();
+                renderProducts();
+            });
+
+            lucide.createIcons();
+        });
+
+        window.setLiveProducts = function(liveList) {
+            products = Array.isArray(liveList) ? [...liveList] : [];
+            saveLocalProducts();
+            renderProducts();
+            const invCount = document.getElementById('adminInventoryCount');
+            if (invCount) invCount.textContent = products.length;
+            renderAdminInventoryTable();
+        };
+
+        window.loadLocalFallbackProducts = function() {
+            try {
+                const stored = localStorage.getItem(LS_KEYS.PRODUCTS);
+                products = stored ? JSON.parse(stored) : [];
+            } catch (e) {
+                products = [];
+            }
+            renderProducts();
+        };
+
+        window.setStoreWhatsAppNumber = function(num, saveLocal = true) {
+            storeSettings.whatsappNumber = num;
+            if (saveLocal) saveSettingsToStorage();
+            updateStoreInfoDisplays();
+            const input = document.getElementById('ownerPhoneSetting');
+            if (input) input.value = num;
+        };
+
+        function loadPersistedLocalData() {
+            try {
+                const storedCart = localStorage.getItem(LS_KEYS.CART);
+                cart = storedCart ? JSON.parse(storedCart) : [];
+
+                const storedSettings = localStorage.getItem(LS_KEYS.SETTINGS);
+                if (storedSettings) {
+                    storeSettings = { ...storeSettings, ...JSON.parse(storedSettings) };
+                }
+
+                const storedOrders = localStorage.getItem(LS_KEYS.ORDERS);
+                ordersLog = storedOrders ? JSON.parse(storedOrders) : [];
+            } catch (err) {
+                console.error("Local data load error:", err);
+                cart = [];
+            }
+        }
+
+        function saveLocalProducts() {
+            localStorage.setItem(LS_KEYS.PRODUCTS, JSON.stringify(products));
+        }
+
+        function saveCart() {
+            localStorage.setItem(LS_KEYS.CART, JSON.stringify(cart));
+        }
+
+        function saveSettingsToStorage() {
+            localStorage.setItem(LS_KEYS.SETTINGS, JSON.stringify(storeSettings));
+        }
+
+        function saveOrdersLog() {
+            localStorage.setItem(LS_KEYS.ORDERS, JSON.stringify(ordersLog));
+        }
+
+        function renderCategoryTabs() {
+            const container = document.getElementById('categoryButtonsContainer');
+            container.innerHTML = CATEGORIES.map(cat => {
+                const isActive = selectedCategory === cat;
+                return `
+                    <button onclick="filterCategory('${cat}')" 
+                        class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all uppercase tracking-wider ${
+                            isActive 
+                                ? 'bg-amber-500 text-black shadow-md shadow-amber-500/20' 
+                                : 'bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 hover:border-zinc-700'
+                        }">
+                        ${cat}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function filterCategory(cat) {
+            selectedCategory = cat;
+            renderCategoryTabs();
+            renderProducts();
+        }
+
+        function toggleSaleFilter() {
+            onlySaleFilter = !onlySaleFilter;
+            const btn = document.getElementById('saleOnlyToggle');
+            if (onlySaleFilter) {
+                btn.className = "flex items-center gap-1.5 bg-red-600 text-white border border-red-500 px-3 py-1.5 rounded-full text-xs font-bold shadow-md shadow-red-900/40 transition-all";
+            } else {
+                btn.className = "flex items-center gap-1.5 bg-red-500/10 text-red-400 border border-red-500/30 px-3 py-1.5 rounded-full text-xs font-bold hover:bg-red-500/20 transition-all";
+            }
+            renderProducts();
+        }
+
+        function filterBySpecial(type) {
+            if (type === 'sale') {
+                onlySaleFilter = true;
+                selectedCategory = 'All';
+                const btn = document.getElementById('saleOnlyToggle');
+                btn.className = "flex items-center gap-1.5 bg-red-600 text-white border border-red-500 px-3 py-1.5 rounded-full text-xs font-bold shadow-md shadow-red-900/40 transition-all";
+                renderCategoryTabs();
+                renderProducts();
+                window.scrollTo({ top: 400, behavior: 'smooth' });
+            }
+        }
+
+        function handleSortChange() {
+            sortOption = document.getElementById('sortSelect').value;
+            renderProducts();
+        }
+
+        function clearSearch() {
+            searchQuery = "";
+            document.getElementById('searchInput').value = "";
+            document.getElementById('mobileSearchInput').value = "";
+            toggleClearSearchBtn();
+            renderProducts();
+        }
+
+        function toggleClearSearchBtn() {
+            const btn = document.getElementById('clearSearchBtn');
+            if (searchQuery.length > 0) {
+                btn.classList.remove('hidden');
+            } else {
+                btn.classList.add('hidden');
+            }
+        }
+
+        function resetFilters() {
+            selectedCategory = "All";
+            onlySaleFilter = false;
+            searchQuery = "";
+            sortOption = "featured";
+            document.getElementById('searchInput').value = "";
+            document.getElementById('mobileSearchInput').value = "";
+            document.getElementById('sortSelect').value = "featured";
+            toggleSaleFilter();
+            onlySaleFilter = false;
+            renderCategoryTabs();
+            renderProducts();
+        }
+
+        // Helper to get image array safely (with backward compatibility)
+        function getProductImages(product) {
+            if (Array.isArray(product.images) && product.images.length > 0) {
+                return product.images.filter(Boolean);
+            }
+            if (product.image) {
+                return [product.image];
+            }
+            return ["https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop&fm=jpg"];
+        }
+
+        // Render Product Cards with Shimmer & Animated Overlays
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            const emptyState = document.getElementById('emptyCatalogueState');
+            const itemCountElem = document.getElementById('itemCount');
+
+            let filtered = products.filter(p => {
+                const matchCategory = (selectedCategory === "All" || p.category === selectedCategory);
+                const matchSale = (!onlySaleFilter || p.isOnSale === true);
+                const matchSearch = (!searchQuery || 
+                    (p.name && p.name.toLowerCase().includes(searchQuery)) || 
+                    (p.category && p.category.toLowerCase().includes(searchQuery)) ||
+                    (p.description && p.description.toLowerCase().includes(searchQuery))
+                );
+                return matchCategory && matchSale && matchSearch;
+            });
+
+            if (sortOption === "price-low") {
+                filtered.sort((a, b) => Number(a.salePrice) - Number(b.salePrice));
+            } else if (sortOption === "price-high") {
+                filtered.sort((a, b) => Number(b.salePrice) - Number(a.salePrice));
+            } else if (sortOption === "discount") {
+                filtered.sort((a, b) => {
+                    const discA = ((Number(a.originalPrice) - Number(a.salePrice)) / Number(a.originalPrice)) || 0;
+                    const discB = ((Number(b.originalPrice) - Number(b.salePrice)) / Number(b.originalPrice)) || 0;
+                    return discB - discA;
+                });
+            }
+
+            itemCountElem.textContent = filtered.length;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = "";
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+
+            grid.innerHTML = filtered.map(product => {
+                const orig = Number(product.originalPrice) || 0;
+                const sale = Number(product.salePrice) || 0;
+                const discountPercent = orig > sale ? Math.round(((orig - sale) / orig) * 100) : 0;
+                const sizesArray = Array.isArray(product.sizes) ? product.sizes : ["Free Size"];
+                const imgList = getProductImages(product);
+                const primaryImg = imgList[0];
+
+                return `
+                    <div class="bg-[#131417] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col group hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 relative">
+                        
+                        <!-- Graphic Shimmer Light Sweep on Hover -->
+                        <div class="absolute inset-0 pointer-events-none overflow-hidden z-20">
+                            <div class="w-1/2 h-full bg-gradient-to-r from-transparent via-white/10 to-transparent card-shimmer-sweep transform -translate-x-[150%]"></div>
+                        </div>
+
+                        <!-- Image Container with Click-to-Open -->
+                        <div class="relative overflow-hidden aspect-[4/5] bg-zinc-900 cursor-pointer" onclick="openProductModal('${product.id}')">
+                            <img src="${primaryImg}" 
+                                alt="${product.name}"
+                                loading="lazy"
+                                onerror="this.src='https://placehold.co/600x800/18181b/f59e0b?text=${encodeURIComponent(product.name || 'HEAVYKART')}'" 
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-2.5 left-2.5 flex flex-col gap-1.5 z-10">
+                                ${product.isOnSale ? `
+                                    <span class="bg-red-600 text-white font-heavy text-[11px] font-bold px-2 py-0.5 rounded uppercase tracking-wider shadow badge-pulse">
+                                        SALE ${discountPercent}% OFF
+                                    </span>
+                                ` : ''}
+                                ${product.badge ? `
+                                    <span class="bg-amber-500 text-black font-heavy text-[10px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider shadow">
+                                        ${product.badge}
+                                    </span>
+                                ` : ''}
+                            </div>
+
+                            <!-- Photo Count Badge (e.g. 3 JPGs) -->
+                            <div class="absolute top-2.5 right-2.5 bg-black/75 backdrop-blur text-[10px] font-bold text-amber-400 px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-zinc-700/80 group-hover:border-amber-500/70 transition-colors">
+                                <i data-lucide="layers" class="w-3 h-3 text-amber-400"></i>
+                                <span>${imgList.length} JPG${imgList.length > 1 ? 's' : ''}</span>
+                            </div>
+
+                            <!-- Category Overlay -->
+                            <div class="absolute bottom-2.5 left-2.5 bg-black/70 backdrop-blur-md text-[10px] uppercase font-bold text-zinc-300 px-2 py-0.5 rounded border border-zinc-800">
+                                ${product.category || 'Apparel'}
+                            </div>
+
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
+                                <span class="bg-black/90 text-white text-xs font-bold px-3.5 py-1.5 rounded-full border border-amber-500/80 flex items-center gap-1.5 shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-200">
+                                    <i data-lucide="eye" class="w-3.5 h-3.5 text-amber-400"></i> View 3 Angles
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div class="cursor-pointer" onclick="openProductModal('${product.id}')">
+                                <h3 class="font-bold text-sm text-zinc-100 line-clamp-1 group-hover:text-amber-400 transition-colors" title="${product.name}">
+                                    ${product.name}
+                                </h3>
+                                <p class="text-[11px] text-zinc-400 line-clamp-2 mt-1">
+                                    ${product.description || "Premium fabric designed for structured modern streetwear fit."}
+                                </p>
+                            </div>
+
+                            <!-- Size Selector -->
+                            <div onclick="event.stopPropagation()">
+                                <span class="text-[10px] font-semibold text-zinc-500 uppercase block mb-1">Select Size:</span>
+                                <div class="flex flex-wrap gap-1.5" id="sizeSelector_${product.id}">
+                                    ${sizesArray.map((sz, idx) => `
+                                        <button type="button" 
+                                            onclick="selectProductSize('${product.id}', '${sz}')" 
+                                            class="size-pill-${product.id} text-[11px] font-bold px-2.5 py-1 rounded border transition-all ${
+                                                idx === 0 
+                                                    ? 'bg-amber-500 text-black border-amber-500' 
+                                                    : 'bg-zinc-900 text-zinc-300 border-zinc-700 hover:border-zinc-500'
+                                            }" 
+                                            data-size="${sz}">
+                                            ${sz}
+                                        </button>
+                                    `).join('')}
+                                </div>
+                            </div>
+
+                            <!-- Pricing -->
+                            <div class="flex items-baseline justify-between pt-1 border-t border-zinc-800/80 cursor-pointer" onclick="openProductModal('${product.id}')">
+                                <div>
+                                    <span class="font-heavy text-xl font-bold text-white">₹${Number(product.salePrice).toLocaleString()}</span>
+                                    ${orig > sale ? `
+                                        <s class="text-xs text-zinc-500 ml-1.5 font-sans">₹${orig.toLocaleString()}</s>
+                                    ` : ''}
+                                </div>
+                                <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live Stock
+                                </span>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="grid grid-cols-2 gap-2 pt-1" onclick="event.stopPropagation()">
+                                <button onclick="quickBuyWhatsApp('${product.id}')" class="w-full bg-[#25D366] hover:bg-[#1eb854] text-black font-extrabold py-2 px-2 rounded-lg text-xs flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95" title="Order directly on WhatsApp">
+                                    <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-current"></i>
+                                    <span>WhatsApp</span>
+                                </button>
+                                <button onclick="addToCart('${product.id}')" class="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold py-2 px-2 rounded-lg text-xs flex items-center justify-center gap-1.5 border border-zinc-700 transition-all hover:text-amber-400 hover:border-amber-500/40 active:scale-95">
+                                    <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                                    <span>Add Bag</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        // Product Detail Modal Open
+        function openProductModal(productId) {
+            const product = products.find(p => String(p.id) === String(productId));
+            if (!product) return;
+
+            activeModalProduct = product;
+            activeModalQty = 1;
+            activeModalImageIndex = 0;
+
+            const sizesArray = Array.isArray(product.sizes) ? product.sizes : ["Free Size"];
+            activeModalSelectedSize = sizesArray.length > 0 ? sizesArray[0] : "Free Size";
+
+            const modal = document.getElementById('productDetailModal');
+            document.getElementById('modalProdTitle').textContent = product.name;
+            document.getElementById('modalProdCategory').textContent = product.category;
+            document.getElementById('modalProdSalePrice').textContent = `₹${Number(product.salePrice).toLocaleString()}`;
+            document.getElementById('modalProdDescription').textContent = product.description || "Heavyweight structured streetwear silhouette. Crafted from high-GSM combed cotton designed for an effortless oversized drape.";
+            document.getElementById('modalQtyDisplay').textContent = activeModalQty;
+
+            const modalCartCount = document.getElementById('modalCartCount');
+            if (modalCartCount) {
+                modalCartCount.textContent = cart.reduce((acc, curr) => acc + curr.qty, 0);
+            }
+
+            // Setup 3 JPG Gallery
+            renderModalGallery();
+
+            const orig = Number(product.originalPrice) || 0;
+            const sale = Number(product.salePrice) || 0;
+            const origEl = document.getElementById('modalProdOriginalPrice');
+            const discTagEl = document.getElementById('modalProdDiscountTag');
+
+            if (orig > sale) {
+                const discount = Math.round(((orig - sale) / orig) * 100);
+                origEl.textContent = `₹${orig.toLocaleString()}`;
+                origEl.classList.remove('hidden');
+                discTagEl.textContent = `${discount}% OFF`;
+                discTagEl.classList.remove('hidden');
+            } else {
+                origEl.classList.add('hidden');
+                discTagEl.classList.add('hidden');
+            }
+
+            const badgesContainer = document.getElementById('modalProdBadges');
+            badgesContainer.innerHTML = '';
+            if (product.isOnSale && orig > sale) {
+                const discount = Math.round(((orig - sale) / orig) * 100);
+                badgesContainer.innerHTML += `
+                    <span class="bg-red-600 text-white font-heavy text-xs font-bold px-3 py-1 rounded-lg uppercase tracking-wider shadow-lg">
+                        SALE ${discount}% OFF
+                    </span>
+                `;
+            }
+            if (product.badge) {
+                badgesContainer.innerHTML += `
+                    <span class="bg-amber-500 text-black font-heavy text-xs font-extrabold px-3 py-1 rounded-lg uppercase tracking-wider shadow-lg">
+                        ${product.badge}
+                    </span>
+                `;
+            }
+
+            renderModalSizes();
+            renderModalRelated(product);
+
+            modal.classList.remove('hidden');
+            modal.scrollTop = 0;
+            document.body.classList.add('overflow-hidden');
+            lucide.createIcons();
+        }
+
+        function renderModalGallery() {
+            if (!activeModalProduct) return;
+            const imgList = getProductImages(activeModalProduct);
+
+            if (activeModalImageIndex >= imgList.length) activeModalImageIndex = 0;
+            if (activeModalImageIndex < 0) activeModalImageIndex = imgList.length - 1;
+
+            const currentImg = imgList[activeModalImageIndex];
+            const mainImg = document.getElementById('modalProdImage');
+            mainImg.src = currentImg;
+            mainImg.onerror = () => { mainImg.src = `https://placehold.co/800x1000/18181b/f59e0b?text=${encodeURIComponent(activeModalProduct.name)}`; };
+
+            // Indicator
+            const indicator = document.getElementById('modalImageIndexIndicator');
+            indicator.textContent = `${activeModalImageIndex + 1} / ${imgList.length}`;
+
+            // Render Thumbnails
+            const strip = document.getElementById('modalThumbnailsStrip');
+            strip.innerHTML = imgList.map((imgUrl, idx) => {
+                const isSelected = (idx === activeModalImageIndex);
+                const labels = ["Front View", "Back View", "Fit Detail"];
+                return `
+                    <button type="button" onclick="selectModalImage(${idx})"
+                        class="rounded-xl overflow-hidden border-2 transition-all p-0.5 bg-zinc-900 group ${
+                            isSelected ? 'border-amber-500 ring-2 ring-amber-500/30' : 'border-zinc-800 opacity-60 hover:opacity-100 hover:border-zinc-600'
+                        }">
+                        <div class="aspect-[4/5] bg-zinc-950 overflow-hidden rounded-lg">
+                            <img src="${imgUrl}" alt="Angle ${idx + 1}" class="w-full h-full object-cover">
+                        </div>
+                        <span class="block text-[10px] font-bold text-center py-1 truncate uppercase ${isSelected ? 'text-amber-400' : 'text-zinc-400'}">
+                            ${labels[idx] || `Angle ${idx + 1}`}
+                        </span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function selectModalImage(idx) {
+            activeModalImageIndex = idx;
+            renderModalGallery();
+        }
+
+        function navigateModalImage(delta) {
+            if (!activeModalProduct) return;
+            const imgList = getProductImages(activeModalProduct);
+            activeModalImageIndex = (activeModalImageIndex + delta + imgList.length) % imgList.length;
+            renderModalGallery();
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('productDetailModal');
+            if (modal) modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            activeModalProduct = null;
+        }
+
+        function handleDetailBackdropClick(e) {
+            if (e.target.id === 'productDetailModal') {
+                closeProductModal();
+            }
+        }
+
+        function renderModalSizes() {
+            if (!activeModalProduct) return;
+            const container = document.getElementById('modalSizesContainer');
+            const sizesArray = Array.isArray(activeModalProduct.sizes) ? activeModalProduct.sizes : ["Free Size"];
+            container.innerHTML = sizesArray.map(sz => {
+                const isSelected = activeModalSelectedSize === sz;
+                return `
+                    <button type="button" 
+                        onclick="setModalSelectedSize('${sz}')"
+                        class="px-4 py-2.5 text-xs font-bold rounded-xl border transition-all uppercase tracking-wider ${
+                            isSelected 
+                                ? 'bg-amber-500 text-black border-amber-500 shadow-lg shadow-amber-500/25 scale-105' 
+                                : 'bg-zinc-900 text-zinc-300 border-zinc-700 hover:border-zinc-500 hover:text-white'
+                        }">
+                        ${sz}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function renderModalRelated(currentProd) {
+            const container = document.getElementById('modalRelatedContainer');
+            if (!container) return;
+
+            const related = products
+                .filter(p => String(p.id) !== String(currentProd.id))
+                .slice(0, 4);
+
+            if (related.length === 0) {
+                container.innerHTML = `<p class="col-span-2 sm:col-span-4 text-xs text-zinc-500 py-2">No other products listed yet.</p>`;
+                return;
+            }
+
+            container.innerHTML = related.map(prod => {
+                const imgList = getProductImages(prod);
+                return `
+                    <div onclick="openProductModal('${prod.id}')" class="bg-[#131417] border border-zinc-800 hover:border-amber-500/50 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 group flex flex-col">
+                        <div class="aspect-[4/5] bg-zinc-950 overflow-hidden relative">
+                            <img src="${imgList[0]}" alt="${prod.name}" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                onerror="this.src='https://placehold.co/400x500/18181b/f59e0b?text=${encodeURIComponent(prod.name)}'">
+                            <span class="absolute bottom-2 left-2 bg-black/70 backdrop-blur text-[10px] text-zinc-300 px-2 py-0.5 rounded font-bold uppercase">
+                                ${prod.category}
+                            </span>
+                        </div>
+                        <div class="p-3 flex-1 flex flex-col justify-between">
+                            <h5 class="text-xs font-bold text-white truncate group-hover:text-amber-400 transition-colors">${prod.name}</h5>
+                            <div class="flex items-center justify-between mt-2 pt-1 border-t border-zinc-800">
+                                <span class="font-heavy text-base font-bold text-amber-400">₹${Number(prod.salePrice).toLocaleString()}</span>
+                                ${prod.originalPrice > prod.salePrice ? `<s class="text-[11px] text-zinc-500 font-sans">₹${Number(prod.originalPrice).toLocaleString()}</s>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function setModalSelectedSize(sz) {
+            activeModalSelectedSize = sz;
+            renderModalSizes();
+        }
+
+        function changeModalQty(delta) {
+            activeModalQty = Math.max(1, activeModalQty + delta);
+            document.getElementById('modalQtyDisplay').textContent = activeModalQty;
+        }
+
+        function buyModalProductWhatsApp() {
+            if (!activeModalProduct) return;
+            const imgList = getProductImages(activeModalProduct);
+
+            directCheckoutSingleItem = {
+                id: activeModalProduct.id,
+                name: activeModalProduct.name,
+                price: Number(activeModalProduct.salePrice),
+                originalPrice: Number(activeModalProduct.originalPrice),
+                size: activeModalSelectedSize,
+                qty: activeModalQty,
+                image: imgList[0]
+            };
+
+            closeProductModal();
+            openCheckoutModal();
+        }
+
+        // Dedicated Fullscreen Lightbox with 3-Angle Navigation
+        function openActiveProductLightbox() {
+            if (!activeModalProduct) return;
+            openImageLightbox(activeModalImageIndex);
+        }
+
+        function openImageLightbox(index = 0) {
+            if (!activeModalProduct) return;
+            const imgList = getProductImages(activeModalProduct);
+            activeModalImageIndex = (index + imgList.length) % imgList.length;
+
+            const lightbox = document.getElementById('imageLightboxModal');
+            const imgElem = document.getElementById('lightboxImg');
+            const titleElem = document.getElementById('lightboxTitle');
+            const indexPill = document.getElementById('lightboxIndexPill');
+
+            if (!lightbox || !imgElem) return;
+
+            imgElem.src = imgList[activeModalImageIndex];
+            if (titleElem) titleElem.textContent = activeModalProduct.name;
+            if (indexPill) indexPill.textContent = `${activeModalImageIndex + 1} / ${imgList.length}`;
+
+            lightbox.classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function navigateLightboxImage(delta) {
+            if (!activeModalProduct) return;
+            const imgList = getProductImages(activeModalProduct);
+            activeModalImageIndex = (activeModalImageIndex + delta + imgList.length) % imgList.length;
+            
+            const imgElem = document.getElementById('lightboxImg');
+            const indexPill = document.getElementById('lightboxIndexPill');
+            imgElem.src = imgList[activeModalImageIndex];
+            if (indexPill) indexPill.textContent = `${activeModalImageIndex + 1} / ${imgList.length}`;
+            renderModalGallery();
+        }
+
+        function closeImageLightbox() {
+            const lightbox = document.getElementById('imageLightboxModal');
+            if (lightbox) lightbox.classList.add('hidden');
+        }
+
+        function buyFromLightbox() {
+            closeImageLightbox();
+            if (activeModalProduct) {
+                buyModalProductWhatsApp();
+            }
+        }
+
+        function addModalProductToCart() {
+            if (!activeModalProduct) return;
+            const imgList = getProductImages(activeModalProduct);
+
+            const cartItemId = `${activeModalProduct.id}_${activeModalSelectedSize}`;
+            const existingIndex = cart.findIndex(item => item.cartItemId === cartItemId);
+
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += activeModalQty;
+            } else {
+                cart.push({
+                    cartItemId: cartItemId,
+                    id: activeModalProduct.id,
+                    name: activeModalProduct.name,
+                    price: Number(activeModalProduct.salePrice),
+                    originalPrice: Number(activeModalProduct.originalPrice),
+                    image: imgList[0],
+                    size: activeModalSelectedSize,
+                    qty: activeModalQty
+                });
+            }
+
+            saveCart();
+            updateCartUI();
+            
+            const modalCartCount = document.getElementById('modalCartCount');
+            if (modalCartCount) {
+                modalCartCount.textContent = cart.reduce((acc, curr) => acc + curr.qty, 0);
+            }
+
+            showToast("Added To Bag", `${activeModalQty}x ${activeModalProduct.name} (${activeModalSelectedSize}) added!`);
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeImageLightbox();
+                closeProductModal();
+                toggleCartDrawer(false);
+                closeCheckoutModal();
+                closeAdminModal();
+                closeQuickEditModal();
+            }
+            if (e.key === 'ArrowRight') {
+                const lightbox = document.getElementById('imageLightboxModal');
+                if (lightbox && !lightbox.classList.contains('hidden')) {
+                    navigateLightboxImage(1);
+                } else if (activeModalProduct) {
+                    navigateModalImage(1);
+                }
+            }
+            if (e.key === 'ArrowLeft') {
+                const lightbox = document.getElementById('imageLightboxModal');
+                if (lightbox && !lightbox.classList.contains('hidden')) {
+                    navigateLightboxImage(-1);
+                } else if (activeModalProduct) {
+                    navigateModalImage(-1);
+                }
+            }
+        });
+
+        function selectProductSize(productId, selectedSize) {
+            const pills = document.querySelectorAll(`.size-pill-${productId}`);
+            pills.forEach(pill => {
+                if (pill.getAttribute('data-size') === selectedSize) {
+                    pill.className = `size-pill-${productId} text-[11px] font-bold px-2.5 py-1 rounded border bg-amber-500 text-black border-amber-500`;
+                } else {
+                    pill.className = `size-pill-${productId} text-[11px] font-bold px-2.5 py-1 rounded border bg-zinc-900 text-zinc-300 border-zinc-700 hover:border-zinc-500`;
+                }
+            });
+        }
+
+        function getSelectedSizeForProduct(productId) {
+            const activePill = document.querySelector(`.size-pill-${productId}.bg-amber-500`);
+            if (activePill) return activePill.getAttribute('data-size');
+            const product = products.find(p => String(p.id) === String(productId));
+            return (product && Array.isArray(product.sizes) && product.sizes.length > 0) ? product.sizes[0] : "Standard";
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => String(p.id) === String(productId));
+            if (!product) return;
+
+            const chosenSize = getSelectedSizeForProduct(productId);
+            const cartItemId = `${product.id}_${chosenSize}`;
+            const imgList = getProductImages(product);
+
+            const existingIndex = cart.findIndex(item => item.cartItemId === cartItemId);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({
+                    cartItemId: cartItemId,
+                    id: product.id,
+                    name: product.name,
+                    price: Number(product.salePrice),
+                    originalPrice: Number(product.originalPrice),
+                    image: imgList[0],
+                    size: chosenSize,
+                    qty: 1
+                });
+            }
+
+            saveCart();
+            updateCartUI();
+            showToast("Added To Bag", `${product.name} (${chosenSize}) added to your shopping bag.`);
+        }
+
+        function updateCartQty(cartItemId, delta) {
+            const index = cart.findIndex(item => item.cartItemId === cartItemId);
+            if (index === -1) return;
+
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+
+            saveCart();
+            updateCartUI();
+        }
+
+        function removeFromCart(cartItemId) {
+            cart = cart.filter(item => item.cartItemId !== cartItemId);
+            saveCart();
+            updateCartUI();
+        }
+
+        function clearCart() {
+            cart = [];
+            saveCart();
+            updateCartUI();
+            showToast("Bag Emptied", "All items have been removed from your cart.");
+        }
+
+        function toggleCartDrawer(open) {
+            const drawer = document.getElementById('cartDrawer');
+            const backdrop = document.getElementById('cartDrawerBackdrop');
+            if (open) {
+                backdrop.classList.remove('pointer-events-none', 'opacity-0');
+                backdrop.classList.add('opacity-100');
+                drawer.classList.remove('translate-x-full');
+            } else {
+                backdrop.classList.remove('opacity-100');
+                backdrop.classList.add('pointer-events-none', 'opacity-0');
+                drawer.classList.add('translate-x-full');
+            }
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cartCountBadge');
+            const container = document.getElementById('cartItemsContainer');
+            const subtotalElem = document.getElementById('cartSubtotal');
+            const discountElem = document.getElementById('cartDiscount');
+            const grandTotalElem = document.getElementById('cartGrandTotal');
+            const checkoutBtn = document.getElementById('cartCheckoutBtn');
+
+            const totalItemsCount = cart.reduce((acc, curr) => acc + curr.qty, 0);
+            badge.textContent = totalItemsCount;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="h-full flex flex-col items-center justify-center text-center p-6 text-zinc-500">
+                        <i data-lucide="shopping-bag" class="w-12 h-12 mb-3 text-zinc-700"></i>
+                        <p class="font-bold text-white text-sm">Your shopping bag is empty</p>
+                        <p class="text-xs text-zinc-400 mt-1 max-w-xs">Explore our latest drops and add oversized tees, cargos, and jackets.</p>
+                        <button onclick="toggleCartDrawer(false)" class="mt-4 bg-zinc-800 text-amber-400 hover:text-white text-xs font-bold px-4 py-2 rounded-lg border border-zinc-700">
+                            Continue Browsing
+                        </button>
+                    </div>
+                `;
+                subtotalElem.textContent = "₹0";
+                discountElem.textContent = "-₹0";
+                grandTotalElem.textContent = "₹0";
+                checkoutBtn.disabled = true;
+                checkoutBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                lucide.createIcons();
+                return;
+            }
+
+            checkoutBtn.disabled = false;
+            checkoutBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+
+            let totalSalePrice = 0;
+            let totalOriginalPrice = 0;
+
+            container.innerHTML = cart.map(item => {
+                totalSalePrice += (item.price * item.qty);
+                totalOriginalPrice += (item.originalPrice * item.qty);
+
+                return `
+                    <div class="flex items-center gap-3 p-3 bg-zinc-900/70 border border-zinc-800/80 rounded-xl">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-20 object-cover rounded-lg border border-zinc-800 flex-shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-xs text-white truncate">${item.name}</h4>
+                            <p class="text-[11px] text-zinc-400 mt-0.5">Size: <span class="text-amber-400 font-bold">${item.size}</span></p>
+                            <p class="font-heavy text-sm text-white font-bold mt-1">₹${item.price.toLocaleString()} <span class="text-[10px] text-zinc-500 font-sans font-normal">x ${item.qty}</span></p>
+                            
+                            <div class="flex items-center gap-2 mt-2">
+                                <button onclick="updateCartQty('${item.cartItemId}', -1)" class="w-6 h-6 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 rounded flex items-center justify-center font-bold text-xs">
+                                    -
+                                </button>
+                                <span class="text-xs font-bold text-white px-1.5">${item.qty}</span>
+                                <button onclick="updateCartQty('${item.cartItemId}', 1)" class="w-6 h-6 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 rounded flex items-center justify-center font-bold text-xs">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart('${item.cartItemId}')" class="text-zinc-500 hover:text-red-400 p-1" title="Remove item">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                `;
+            }).join('');
+
+            const savings = Math.max(0, totalOriginalPrice - totalSalePrice);
+            subtotalElem.textContent = `₹${totalOriginalPrice.toLocaleString()}`;
+            discountElem.textContent = `-₹${savings.toLocaleString()}`;
+            grandTotalElem.textContent = `₹${totalSalePrice.toLocaleString()}`;
+
+            lucide.createIcons();
+        }
+
+        // WhatsApp Ordering Pipeline
+        function quickBuyWhatsApp(productId) {
+            const product = products.find(p => String(p.id) === String(productId));
+            if (!product) return;
+
+            const chosenSize = getSelectedSizeForProduct(productId);
+            const imgList = getProductImages(product);
+
+            directCheckoutSingleItem = {
+                id: product.id,
+                name: product.name,
+                price: Number(product.salePrice),
+                originalPrice: Number(product.originalPrice),
+                size: chosenSize,
+                qty: 1,
+                image: imgList[0]
+            };
+
+            openCheckoutModal();
+        }
+
+        function openCheckoutModal() {
+            const modal = document.getElementById('checkoutModal');
+            const previewContainer = document.getElementById('checkoutOrderPreview');
+
+            let itemsToSummarize = directCheckoutSingleItem ? [directCheckoutSingleItem] : [...cart];
+
+            if (itemsToSummarize.length === 0) {
+                showToast("Empty Bag", "Please add at least one product to order.");
+                return;
+            }
+
+            let totalBill = 0;
+            previewContainer.innerHTML = itemsToSummarize.map(item => {
+                totalBill += (item.price * item.qty);
+                return `
+                    <div class="flex justify-between text-zinc-300 py-0.5 border-b border-zinc-800/60 last:border-none">
+                        <span>• ${item.name} (${item.size}) x${item.qty}</span>
+                        <span class="font-bold text-amber-400">₹${(item.price * item.qty).toLocaleString()}</span>
+                    </div>
+                `;
+            }).join('');
+
+            previewContainer.innerHTML += `
+                <div class="flex justify-between text-white font-bold pt-2 border-t border-zinc-700 text-sm">
+                    <span>Order Bill Payable:</span>
+                    <span class="text-emerald-400">₹${totalBill.toLocaleString()}</span>
+                </div>
+            `;
+
+            toggleCartDrawer(false);
+            modal.classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+            directCheckoutSingleItem = null;
+        }
+
+        async function executeWhatsAppOrder(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const payment = document.getElementById('custPayment').value;
+            const notes = document.getElementById('custNotes').value.trim();
+
+            let itemsToOrder = directCheckoutSingleItem ? [directCheckoutSingleItem] : [...cart];
+            if (itemsToOrder.length === 0) return;
+
+            let totalAmount = 0;
+            let itemLines = "";
+
+            itemsToOrder.forEach((item, index) => {
+                const lineTotal = item.price * item.qty;
+                totalAmount += lineTotal;
+                itemLines += `${index + 1}. *${item.name}*\n   • Size: ${item.size} | Qty: ${item.qty} | Price: ₹${lineTotal.toLocaleString()}\n`;
+            });
+
+            const message = 
+`⚡ *NEW ORDER - HEAVYKART STORE* ⚡
+━━━━━━━━━━━━━━━━━━━━━
+👤 *CUSTOMER DETAILS:*
+• *Name:* ${name}
+• *Phone:* ${phone}
+• *Delivery Address:* 
+${address}
+━━━━━━━━━━━━━━━━━━━━━
+🛍️ *ORDERED ITEMS:*
+${itemLines}
+━━━━━━━━━━━━━━━━━━━━━
+💰 *TOTAL AMOUNT:* ₹${totalAmount.toLocaleString()}
+💳 *Payment Mode:* ${payment}
+${notes ? `📝 *Special Note:* ${notes}\n` : ''}━━━━━━━━━━━━━━━━━━━━━
+_Please confirm my order and share invoice/tracking updates!_`;
+
+            const targetPhone = storeSettings.whatsappNumber.replace(/[^0-9]/g, '');
+            const encodedText = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${targetPhone}?text=${encodedText}`;
+
+            const newOrderRecord = {
+                id: 'HK-' + Date.now().toString().slice(-6),
+                date: new Date().toLocaleString(),
+                customerName: name,
+                customerPhone: phone,
+                address: address,
+                items: itemsToOrder,
+                total: totalAmount,
+                paymentMode: payment,
+                status: 'Inquired on WhatsApp'
+            };
+
+            ordersLog.unshift(newOrderRecord);
+            saveOrdersLog();
+
+            if (window.cloudLogOrder) {
+                window.cloudLogOrder(newOrderRecord).catch(err => console.log(err));
+            }
+
+            if (!directCheckoutSingleItem) {
+                cart = [];
+                saveCart();
+                updateCartUI();
+            }
+            directCheckoutSingleItem = null;
+
+            closeCheckoutModal();
+            showToast("Opening WhatsApp", "Connecting you with HEAVYKART order team on WhatsApp...");
+            window.open(waUrl, '_blank');
+        }
+
+        function openDirectWhatsAppChat() {
+            const targetPhone = storeSettings.whatsappNumber.replace(/[^0-9]/g, '');
+            const defaultMsg = encodeURIComponent("Hello HEAVYKART Team! I have a question regarding Men's fashion products and size availability.");
+            window.open(`https://wa.me/${targetPhone}?text=${defaultMsg}`, '_blank');
+        }
+
+        // Seller Control Panel Operations
+        function openAdminModal() {
+            const modal = document.getElementById('adminModal');
+            modal.classList.remove('hidden');
+
+            if (isAdminLoggedIn) {
+                showAdminWorkspace();
+            } else {
+                document.getElementById('adminLockScreen').classList.remove('hidden');
+                document.getElementById('adminWorkspace').classList.add('hidden');
+                document.getElementById('adminPassInput').value = "";
+                document.getElementById('adminPassInput').focus();
+            }
+        }
+
+        function closeAdminModal() {
+            document.getElementById('adminModal').classList.add('hidden');
+        }
+
+        function verifyAdminPasscode() {
+            const input = document.getElementById('adminPassInput').value;
+            if (input === storeSettings.adminPasscode) {
+                isAdminLoggedIn = true;
+                showAdminWorkspace();
+                showToast("Seller Unlocked", "Welcome to HeavyKart Store Management.");
+            } else {
+                showToast("Access Denied", "Incorrect seller passcode. Please enter the valid code.");
+            }
+        }
+
+        function lockAdminPanel() {
+            isAdminLoggedIn = false;
+            document.getElementById('adminLockScreen').classList.remove('hidden');
+            document.getElementById('adminWorkspace').classList.add('hidden');
+            showToast("Panel Locked", "Seller control panel is locked.");
+        }
+
+        function showAdminWorkspace() {
+            document.getElementById('adminLockScreen').classList.add('hidden');
+            document.getElementById('adminWorkspace').classList.remove('hidden');
+            
+            document.getElementById('ownerPhoneSetting').value = storeSettings.whatsappNumber;
+            document.getElementById('adminInventoryCount').textContent = products.length;
+            document.getElementById('adminOrdersCount').textContent = ordersLog.length;
+
+            renderAdminInventoryTable();
+            renderAdminOrdersList();
+            lucide.createIcons();
+        }
+
+        function switchAdminTab(tabName) {
+            const tabAdd = document.getElementById('tabAddProduct');
+            const tabInv = document.getElementById('tabInventory');
+            const tabOrd = document.getElementById('tabOrders');
+
+            const btnAdd = document.getElementById('tabBtnAdd');
+            const btnInv = document.getElementById('tabBtnInventory');
+            const btnOrd = document.getElementById('tabBtnOrders');
+
+            tabAdd.classList.add('hidden');
+            tabInv.classList.add('hidden');
+            tabOrd.classList.add('hidden');
+
+            btnAdd.className = "pb-3 text-zinc-400 hover:text-white";
+            btnInv.className = "pb-3 text-zinc-400 hover:text-white";
+            btnOrd.className = "pb-3 text-zinc-400 hover:text-white";
+
+            if (tabName === 'add') {
+                tabAdd.classList.remove('hidden');
+                btnAdd.className = "pb-3 text-amber-400 border-b-2 border-amber-500 font-bold";
+            } else if (tabName === 'inventory') {
+                tabInv.classList.remove('hidden');
+                btnInv.className = "pb-3 text-amber-400 border-b-2 border-amber-500 font-bold";
+                renderAdminInventoryTable();
+            } else if (tabName === 'orders') {
+                tabOrd.classList.remove('hidden');
+                btnOrd.className = "pb-3 text-amber-400 border-b-2 border-amber-500 font-bold";
+                renderAdminOrdersList();
+            }
+        }
+
+        function saveStoreSettings() {
+            const newPhone = document.getElementById('ownerPhoneSetting').value.trim();
+            if (!newPhone) {
+                showToast("Invalid Input", "Please enter a valid WhatsApp phone number with country code.");
+                return;
+            }
+            storeSettings.whatsappNumber = newPhone;
+            saveSettingsToStorage();
+            updateStoreInfoDisplays();
+
+            if (window.cloudSaveSettings) {
+                window.cloudSaveSettings(newPhone);
+            }
+
+            showToast("Settings Updated", `Orders will now be sent to +${newPhone}`);
+        }
+
+        function updateStoreInfoDisplays() {
+            const display = document.getElementById('displayStoreWhatsApp');
+            if (display) {
+                display.textContent = `+${storeSettings.whatsappNumber}`;
+            }
+        }
+
+        // 3 JPG Image Upload & Slot Management Functions
+        function handleSlotFile(event, slotNum) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            if (!file.type.match('image.*')) {
+                showToast("Invalid File", "Please select a valid .JPG or .JPEG image.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const maxDim = 800;
+                    let width = img.width;
+                    let height = img.height;
+
+                    if (width > height) {
+                        if (width > maxDim) {
+                            height = Math.round((height * maxDim) / width);
+                            width = maxDim;
+                        }
+                    } else {
+                        if (height > maxDim) {
+                            width = Math.round((width * maxDim) / height);
+                            height = maxDim;
+                        }
+                    }
+
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.82);
+                    document.getElementById(`urlSlot${slotNum}`).value = compressedDataUrl;
+                    updateSlotPreview(slotNum, compressedDataUrl);
+                    showToast("Photo Processed", `JPG ${slotNum} ready.`);
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function handleSlotUrl(url, slotNum) {
+            const trimmed = url.trim();
+            if (trimmed.length > 5) {
+                updateSlotPreview(slotNum, trimmed);
+            } else {
+                document.getElementById(`previewSlot${slotNum}`).classList.add('hidden');
+            }
+        }
+
+        function updateSlotPreview(slotNum, src) {
+            const previewBox = document.getElementById(`previewSlot${slotNum}`);
+            const imgElem = document.getElementById(`imgSlot${slotNum}`);
+            if (!previewBox || !imgElem) return;
+
+            imgElem.src = src;
+            previewBox.classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function clearSlot(slotNum) {
+            const urlInput = document.getElementById(`urlSlot${slotNum}`);
+            const fileInput = document.getElementById(`fileSlot${slotNum}`);
+            const previewBox = document.getElementById(`previewSlot${slotNum}`);
+
+            if (urlInput) urlInput.value = '';
+            if (fileInput) fileInput.value = '';
+            if (previewBox) previewBox.classList.add('hidden');
+        }
+
+        // Quick Preset 3 JPGs into the 3 Slots
+        function load3ImagePreset(presetType) {
+            const presets = {
+                tee: [
+                    "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800&auto=format&fit=crop&fm=jpg"
+                ],
+                cargo: [
+                    "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    "https://images.unsplash.com/photo-1542272604-780c96856592?q=80&w=800&auto=format&fit=crop&fm=jpg"
+                ],
+                flannel: [
+                    "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    "https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=800&auto=format&fit=crop&fm=jpg"
+                ]
+            };
+
+            const images = presets[presetType];
+            if (!images) return;
+
+            for (let i = 1; i <= 3; i++) {
+                const url = images[i - 1];
+                document.getElementById(`urlSlot${i}`).value = url;
+                updateSlotPreview(i, url);
+            }
+
+            showToast("3 JPGs Loaded", `Loaded 3 angles for ${presetType.toUpperCase()}.`);
+        }
+
+        // Add Product: Broadcasts to Cloud with 3 JPG Images
+        async function handleAddNewProduct(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('newProdName').value.trim();
+            const category = document.getElementById('newProdCategory').value;
+            const originalPrice = parseFloat(document.getElementById('newProdOriginalPrice').value);
+            const salePrice = parseFloat(document.getElementById('newProdSalePrice').value);
+            const badge = document.getElementById('newProdBadge').value.trim();
+            const isOnSale = document.getElementById('newProdOnSale').checked;
+            const sizesRaw = document.getElementById('newProdSizes').value;
+            const description = document.getElementById('newProdDesc').value.trim();
+
+            // Collect up to 3 JPG images
+            const slot1 = document.getElementById('urlSlot1').value.trim();
+            const slot2 = document.getElementById('urlSlot2').value.trim();
+            const slot3 = document.getElementById('urlSlot3').value.trim();
+
+            if (!slot1) {
+                showToast("Image Missing", "Please provide at least the primary JPG image (Slot 1).");
+                return;
+            }
+
+            const imagesArray = [slot1, slot2, slot3].filter(url => url && url.length > 5);
+            const parsedSizes = sizesRaw.split(',').map(s => s.trim()).filter(s => s.length > 0);
+
+            const saveBtn = document.getElementById('saveProdBtn');
+            saveBtn.disabled = true;
+            saveBtn.innerHTML = `<i data-lucide="loader" class="w-5 h-5 animate-spin"></i> Broadcasting 3-Angle Drop...`;
+            lucide.createIcons();
+
+            const newProduct = {
+                id: 'hk_prod_' + Date.now(),
+                name,
+                category,
+                originalPrice,
+                salePrice,
+                badge: badge || (isOnSale ? "SALE" : ""),
+                isOnSale,
+                sizes: parsedSizes.length > 0 ? parsedSizes : ["Free Size"],
+                image: imagesArray[0],
+                images: imagesArray,
+                description,
+                createdAt: Date.now()
+            };
+
+            try {
+                if (window.cloudAddProduct) {
+                    await window.cloudAddProduct(newProduct);
+                } else {
+                    products.unshift(newProduct);
+                    saveLocalProducts();
+                    renderProducts();
+                }
+
+                document.getElementById('addProductForm').reset();
+                document.getElementById('newProdSizes').value = "S, M, L, XL, XXL";
+                document.getElementById('newProdOnSale').checked = true;
+                clearSlot(1);
+                clearSlot(2);
+                clearSlot(3);
+
+                showToast("Product Live!", `"${name}" with ${imagesArray.length} JPG images is now visible to all viewers.`);
+                switchAdminTab('inventory');
+            } catch (err) {
+                console.error("Save product error:", err);
+                products.unshift(newProduct);
+                saveLocalProducts();
+                renderProducts();
+                showToast("Published Locally", `Product saved on current browser.`);
+                switchAdminTab('inventory');
+            } finally {
+                saveBtn.disabled = false;
+                saveBtn.innerHTML = `<i data-lucide="check" class="w-5 h-5"></i> Publish Product (3 JPGs) Live For All Viewers`;
+                lucide.createIcons();
+            }
+        }
+
+        // Quick Loader for 3 Curated Streetwear Drops (with 3 JPG images each)
+        async function loadCuratedSampleProducts() {
+            const curatedDrops = [
+                {
+                    id: 'hk_curated_tee_' + Date.now(),
+                    name: "Acid-Wash Heavyweight Boxy Tee",
+                    category: "Oversized Tees",
+                    originalPrice: 1999,
+                    salePrice: 999,
+                    badge: "HOT DROP",
+                    isOnSale: true,
+                    sizes: ["S", "M", "L", "XL", "XXL"],
+                    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    images: [
+                        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800&auto=format&fit=crop&fm=jpg"
+                    ],
+                    description: "420 GSM pure combed cotton. Features an authentic drop-shoulder oversized streetwear silhouette with reinforced ribbed collar.",
+                    createdAt: Date.now() + 3
+                },
+                {
+                    id: 'hk_curated_cargo_' + Date.now(),
+                    name: "Tactical Combat Multi-Pocket Cargos",
+                    category: "Cargo & Pants",
+                    originalPrice: 2999,
+                    salePrice: 1499,
+                    badge: "50% OFF",
+                    isOnSale: true,
+                    sizes: ["30", "32", "34", "36"],
+                    image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    images: [
+                        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                        "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                        "https://images.unsplash.com/photo-1542272604-780c96856592?q=80&w=800&auto=format&fit=crop&fm=jpg"
+                    ],
+                    description: "Engineered ripstop stretch twill. 6 functional deep utility pockets with snap closures, drawstring hems, and heavy belt loops.",
+                    createdAt: Date.now() + 2
+                },
+                {
+                    id: 'hk_curated_shirt_' + Date.now(),
+                    name: "Vintage Plaid Flannel Overshirt",
+                    category: "Shirts & Polos",
+                    originalPrice: 2499,
+                    salePrice: 1199,
+                    badge: "TRENDING",
+                    isOnSale: true,
+                    sizes: ["M", "L", "XL"],
+                    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                    images: [
+                        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                        "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=800&auto=format&fit=crop&fm=jpg",
+                        "https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=800&auto=format&fit=crop&fm=jpg"
+                    ],
+                    description: "Heavy brushed yarn flannel. Ideal for layering over boxy tees. Classic forest green checks with matte buttons.",
+                    createdAt: Date.now() + 1
+                }
+            ];
+
+            for (const item of curatedDrops) {
+                if (window.cloudAddProduct) {
+                    try { await window.cloudAddProduct(item); } catch (e) { products.unshift(item); }
+                } else {
+                    products.unshift(item);
+                }
+            }
+
+            saveLocalProducts();
+            renderProducts();
+            showToast("Curated Drops Added", "3 products loaded, each with 3 full JPG angle views!");
+            if (isAdminLoggedIn) switchAdminTab('inventory');
+        }
+
+        function renderAdminInventoryTable() {
+            const tbody = document.getElementById('adminInventoryTableBody');
+            if (products.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="p-6 text-center text-zinc-500">No products in public inventory. Add one above or load sample drops!</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = products.map(prod => {
+                const imgList = getProductImages(prod);
+                return `
+                    <tr class="hover:bg-zinc-900/40 transition-colors">
+                        <td class="p-3 flex items-center gap-2">
+                            <div class="relative">
+                                <img src="${imgList[0]}" class="w-8 h-10 object-cover rounded border border-zinc-800" onerror="this.src='https://placehold.co/40x50/222/aaa?text=Item'">
+                                <span class="absolute -bottom-1 -right-1 bg-amber-500 text-black font-extrabold text-[8px] px-1 rounded-full font-mono">${imgList.length}</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-white block text-xs">${prod.name}</span>
+                                <span class="text-[10px] text-zinc-500 font-mono">${imgList.length} JPG Angles</span>
+                            </div>
+                        </td>
+                        <td class="p-3 text-zinc-400">${prod.category}</td>
+                        <td class="p-3 font-bold text-amber-400">₹${Number(prod.salePrice).toLocaleString()}</td>
+                        <td class="p-3 text-zinc-500">₹${Number(prod.originalPrice).toLocaleString()}</td>
+                        <td class="p-3">
+                            <button onclick="toggleProductSaleState('${prod.id}')" class="px-2 py-0.5 rounded text-[10px] font-bold ${
+                                prod.isOnSale 
+                                    ? 'bg-red-500/20 text-red-400 border border-red-500/30' 
+                                    : 'bg-zinc-800 text-zinc-500 border border-zinc-700'
+                            }">
+                                ${prod.isOnSale ? '🔥 ON SALE' : 'REGULAR'}
+                            </button>
+                        </td>
+                        <td class="p-3 text-right">
+                            <div class="flex items-center justify-end gap-1.5">
+                                <button onclick="openQuickEditPriceModal('${prod.id}')" class="p-1 text-zinc-400 hover:text-amber-400" title="Edit Price">
+                                    <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+                                </button>
+                                <button onclick="deleteProduct('${prod.id}')" class="p-1 text-zinc-400 hover:text-red-400" title="Delete Product">
+                                    <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        async function toggleProductSaleState(productId) {
+            const index = products.findIndex(p => String(p.id) === String(productId));
+            if (index > -1) {
+                const updatedState = !products[index].isOnSale;
+                products[index].isOnSale = updatedState;
+                
+                if (window.cloudUpdateProduct) {
+                    await window.cloudUpdateProduct(productId, { isOnSale: updatedState });
+                } else {
+                    saveLocalProducts();
+                    renderAdminInventoryTable();
+                    renderProducts();
+                }
+                showToast("Sale Status Updated", `Item is now ${updatedState ? 'ON SALE' : 'Regular'}.`);
+            }
+        }
+
+        function openQuickEditPriceModal(productId) {
+            const prod = products.find(p => String(p.id) === String(productId));
+            if (!prod) return;
+
+            editingProductId = productId;
+            document.getElementById('quickEditProdTitle').textContent = prod.name;
+            document.getElementById('quickEditPriceInput').value = prod.salePrice;
+            document.getElementById('quickEditModal').classList.remove('hidden');
+        }
+
+        function closeQuickEditModal() {
+            document.getElementById('quickEditModal').classList.add('hidden');
+            editingProductId = null;
+        }
+
+        async function submitQuickPriceEdit() {
+            if (!editingProductId) return;
+            const newPrice = parseFloat(document.getElementById('quickEditPriceInput').value);
+            if (isNaN(newPrice) || newPrice <= 0) {
+                showToast("Invalid Price", "Please enter a valid numeric price.");
+                return;
+            }
+
+            if (window.cloudUpdateProduct) {
+                await window.cloudUpdateProduct(editingProductId, { salePrice: newPrice });
+            } else {
+                const prod = products.find(p => String(p.id) === String(editingProductId));
+                if (prod) {
+                    prod.salePrice = newPrice;
+                    saveLocalProducts();
+                    renderAdminInventoryTable();
+                    renderProducts();
+                }
+            }
+
+            closeQuickEditModal();
+            showToast("Price Updated", `Selling price changed to ₹${newPrice.toLocaleString()} for all viewers.`);
+        }
+
+        async function deleteProduct(productId) {
+            const prod = products.find(p => String(p.id) === String(productId));
+            const prodName = prod ? prod.name : "Product";
+
+            if (window.cloudDeleteProduct) {
+                await window.cloudDeleteProduct(productId);
+            } else {
+                products = products.filter(p => String(p.id) !== String(productId));
+                saveLocalProducts();
+                renderAdminInventoryTable();
+                renderProducts();
+            }
+            showToast("Product Removed", `"${prodName}" has been removed from all viewer screens.`);
+        }
+
+        async function clearAllProducts() {
+            if (window.cloudClearAllProducts) {
+                await window.cloudClearAllProducts(products);
+            }
+            products = [];
+            saveLocalProducts();
+            renderAdminInventoryTable();
+            renderProducts();
+            document.getElementById('adminInventoryCount').textContent = 0;
+            showToast("Catalog Cleared", "All products removed from public storefront.");
+        }
+
+        function renderAdminOrdersList() {
+            const list = document.getElementById('adminOrdersList');
+            if (ordersLog.length === 0) {
+                list.innerHTML = `
+                    <div class="p-8 text-center text-zinc-500 border border-zinc-800 rounded-xl">
+                        <i data-lucide="inbox" class="w-8 h-8 mx-auto mb-2 text-zinc-600"></i>
+                        <p class="text-xs">No WhatsApp inquiries received yet.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            list.innerHTML = ordersLog.map(ord => `
+                <div class="bg-zinc-900/80 border border-zinc-800 p-4 rounded-xl space-y-2 text-xs">
+                    <div class="flex items-center justify-between">
+                        <span class="font-mono text-amber-400 font-bold">${ord.id}</span>
+                        <span class="text-[10px] text-zinc-500">${ord.date}</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-zinc-300">
+                        <div>
+                            <span class="text-zinc-500 block">Customer:</span>
+                            <span class="font-bold text-white">${ord.customerName}</span> (${ord.customerPhone})
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block">Bill & Payment:</span>
+                            <span class="font-bold text-emerald-400">₹${Number(ord.total).toLocaleString()}</span> via ${ord.paymentMode}
+                        </div>
+                    </div>
+                    <div class="text-[11px] text-zinc-400 bg-zinc-950 p-2 rounded">
+                        <span class="font-semibold text-zinc-300">Address:</span> ${ord.address}
+                    </div>
+                    <div class="text-[11px] text-zinc-400">
+                        <span class="font-semibold text-zinc-300">Items:</span> 
+                        ${(ord.items || []).map(i => `${i.name} (${i.size}) x${i.qty}`).join(', ')}
+                    </div>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        let toastTimeout = null;
+        function showToast(title, message) {
+            const toast = document.getElementById('toastNotification');
+            const titleElem = document.getElementById('toastTitle');
+            const msgElem = document.getElementById('toastMessage');
+
+            titleElem.textContent = title;
+            msgElem.textContent = message;
+
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            if (toastTimeout) clearTimeout(toastTimeout);
+
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3400);
+        }
+
+        // Dynamic Canvas Ambient Graphics Simulation
+        (function initHeroGraphics() {
+            const canvas = document.getElementById('heroGraphicCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width = 0;
+            let height = 0;
+            let particles = [];
+            const particleCount = 42;
+            let mouseX = -1000;
+            let mouseY = -1000;
+
+            function resize() {
+                if (!canvas.parentElement) return;
+                width = canvas.width = canvas.parentElement.offsetWidth;
+                height = canvas.height = canvas.parentElement.offsetHeight;
+            }
+
+            function createParticles() {
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.5,
+                        vy: (Math.random() - 0.5) * 0.5,
+                        radius: Math.random() * 2 + 1,
+                        color: Math.random() > 0.6 ? '#f59e0b' : '#3f3f46'
+                    });
+                }
+            }
+
+            function animateGraphics() {
+                ctx.clearRect(0, 0, width, height);
+
+                // Draw connecting mesh lines between nearby nodes
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0) p.x = width;
+                    if (p.x > width) p.x = 0;
+                    if (p.y < 0) p.y = height;
+                    if (p.y > height) p.y = 0;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.fill();
+
+                    // Connect lines
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const dx = p.x - p2.x;
+                        const dy = p.y - p2.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 110) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(245, 158, 11, ${0.18 * (1 - dist / 110)})`;
+                            ctx.lineWidth = 0.8;
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.stroke();
+                        }
+                    }
+
+                    // Mouse proximity interaction
+                    const mdx = p.x - mouseX;
+                    const mdy = p.y - mouseY;
+                    const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+                    if (mdist < 140) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.25 * (1 - mdist / 140)})`;
+                        ctx.lineWidth = 1;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(mouseX, mouseY);
+                        ctx.stroke();
+                    }
+                }
+
+                requestAnimationFrame(animateGraphics);
+            }
+
+            window.addEventListener('resize', () => {
+                resize();
+                createParticles();
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouseX = e.clientX - rect.left;
+                mouseY = e.clientY - rect.top;
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                resize();
+                createParticles();
+                animateGraphics();
+            });
+        })();
+    </script>
+</body>
+</html>
